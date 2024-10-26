@@ -18,7 +18,7 @@ class LocalDatabase:
     # Setting the 'Year' column as the index and dropping unnecessary columns
     dataFrame = dataFrame.set_index("Year").drop(columns=["Country Name", "Country Code", "Indicator Name", "Indicator Code"])
     # Adding a new feature for GDP_L1
-    dataFrame['GDP_L1'] = df['GDP'].shift(1)
+    dataFrame['GDP_L1'] = dataFrame['GDP'].shift(1)
     dataFrame = dataFrame.dropna()  # Drop rows with NaN values resulting from the shift
 
     return dataFrame
