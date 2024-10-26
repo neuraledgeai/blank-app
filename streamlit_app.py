@@ -2,7 +2,7 @@ import streamlit as st
 from database import LocalDatabase
 
 db = LocalDatabase()
-df = db.loadDataFrame()
+df = db.getDataFrame()
 
 st.title(f"From database")
 st.write(
