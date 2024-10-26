@@ -1,5 +1,5 @@
 class LocalDatabase:
-  def init(
+  def __init__(
     self,
     data = "Hi from database"
   ):
