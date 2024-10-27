@@ -1,11 +1,14 @@
 import streamlit as st
 from database import LocalDatabase
+from business import DataServer
 
-db = LocalDatabase()
-df = db.getDataFrame()
+#db = LocalDatabase()
+#df = db.getDataFrame()
 
-st.title(f"From database")
+ds = DataServer()
+model = ds.makeForecast()
+st.title(f"From Data Server: {model}")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
-st.dataframe(df)
+#st.dataframe(df)
