@@ -1,6 +1,6 @@
 import joblib
 
-def class DataServer:
+class DataServer:
   def __init__(
     self,
     model_name = "india_gdp_forecasting_model.pkl"
