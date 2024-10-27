@@ -7,7 +7,7 @@ from business import DataServer
 
 ds = DataServer()
 model = ds.makeForecast()
-st.title(f"From Data Server: {model}")
+st.title(f"From Data Serverjjjjj: {model}")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
