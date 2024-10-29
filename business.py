@@ -41,5 +41,5 @@ class Model:
     df = pd.DataFrame(data)
 
     ## Plot the graph
-    fig = plt.plot(df["Year"], df["GDP"], marker='o', linestyle='-')
-    st.pyplot(fig)
+    fig = px.bar(df, x = "Year", y = "GDP")
+     st.plotly_chart(fig1)
