@@ -5,7 +5,7 @@ from business import Model
 #db = LocalDatabase()
 #df = db.getDataFrame()
 
-ds = DataServer()
+ds = Model()
 model = ds.makeForecast()
 st.title(f"From Data Serverjjjjj: {model}, okay")
 st.write(
