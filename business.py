@@ -39,6 +39,8 @@ class Model:
       "GDP" : predicted_gdps
     }
     df = pd.DataFrame(data)
+    df["Year"] = df["Year"].astype(int)
+    df["GDP"] = df["GDP"].astype(float)
 
     ## Plot the graph
     #st.bar_chart(df, x = "Year", y = "GDP")
