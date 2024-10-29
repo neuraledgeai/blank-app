@@ -9,7 +9,7 @@ class IndiaGDPApp:
     self.model = Model()
 
   def forecast(self, years):
-    forcast_data =  model.makeForecast(years = range(1, 11))
+    forcast_data =  self.model.makeForecast(years = range(1, 11))
     
     # Plot India's GDP
     fig = px.line(df.reset_index(), x='Year', y='GDP', 
