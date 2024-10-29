@@ -42,4 +42,4 @@ class Model:
 
     ## Plot the graph
     fig = px.bar(df, x = "Year", y = "GDP")
-     st.plotly_chart(fig)
+    st.plotly_chart(fig)
