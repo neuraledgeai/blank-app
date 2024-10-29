@@ -6,7 +6,7 @@ from business import Model
 #df = db.getDataFrame()
 
 model = Model()
-forcasted_df = model.makeForecast(years = 2)
+forcasted_df = model.makeForecast(years = range(1, 1))
 st.title(f"From Data Server okay")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
