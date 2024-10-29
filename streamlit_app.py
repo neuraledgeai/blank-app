@@ -5,10 +5,10 @@ from business import Model
 #db = LocalDatabase()
 #df = db.getDataFrame()
 
-ds = Model()
-model = ds.makeForecast()
-st.title(f"From Data Serverjjjjj: {model}, okay")
+model = Model()
+forcasted_df = model.makeForecast(years = 2)
+st.title(f"From Data Server okay")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
-#st.dataframe(df)
+st.dataframe(forcasted_df)
