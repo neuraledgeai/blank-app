@@ -14,7 +14,7 @@ class Model:
     
   def makeForecast(self, years):
     # This is GDP for 2023, so that we can start predicting from 2024 to the given number of years
-    gdp = 3_353_470_000_000
+    gdp = 3_353_470_000_000 / 1e12
     corresponding_year = 2023
     
     # To keep predicted GDPs and their corresponding years
@@ -31,7 +31,7 @@ class Model:
       gdp = predicted_gdp[0]
       
       # Add predicted_gdp and corresponding_year to predicted_gdps and corresponding_years lists
-      predicted_gdps.append(predicted_gdp)
+      predicted_gdps.append(predicted_gdp / 1e12)
       corresponding_years.append(corresponding_year)
 
     data = {
