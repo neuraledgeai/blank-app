@@ -17,4 +17,5 @@ st.write(
 )
 #st.dataframe(forcasted_df)
 fig = app.forecast(years = 11)
-st.plotly_chart(fig)
+st.dataframe(fig)
+#st.plotly_chart(fig)
