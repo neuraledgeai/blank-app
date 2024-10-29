@@ -1,6 +1,7 @@
 from business import Model
 import streamlit as st
 import plotly.express as px
+import pandas as pd
 
 class IndiaGDPApp:
   def __init__(
@@ -16,6 +17,7 @@ class IndiaGDPApp:
     #fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
     # Show the plot
     #st.plotly_chart(fig)
-    return df
+    plot = df.plot()
+    return plot
 
 
