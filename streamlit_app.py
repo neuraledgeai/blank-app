@@ -10,10 +10,11 @@ from display import IndiaGDPApp
 # When it is 1, it means 0. 
 #forcasted_df = model.makeForecast(years = range(1, 11))
 
-app = IndiaGDPApp()
+#app = IndiaGDPApp()
 st.title(f"From Data Server okay sjjsss")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
 #st.dataframe(forcasted_df)
-app.forecast(years = 11)
+#app.forecast(years = 11)
+model.makeForecast(years = 11)
