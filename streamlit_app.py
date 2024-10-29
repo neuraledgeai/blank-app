@@ -7,7 +7,7 @@ from business import Model
 
 model = Model()
 # When it is 1, it means 0. 
-forcasted_df = model.makeForecast(years = range(1, 3))
+forcasted_df = model.makeForecast(years = range(1, 11))
 st.title(f"From Data Server okay")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
