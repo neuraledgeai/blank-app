@@ -1,5 +1,6 @@
 import joblib
 import pandas as pd
+import numpy as np
 
 class Model:
   def __init__(
