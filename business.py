@@ -1,4 +1,5 @@
 import joblib
+import pandas as pd
 
 class Model:
   def __init__(
