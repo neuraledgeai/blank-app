@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import streamlit as st
+import matplotlib.pyplot as plt
 
 class Model:
   def __init__(
@@ -40,7 +41,4 @@ class Model:
     df = pd.DataFrame(data)
 
     ## Plot the graph
-    # Plot with Plotly
-    fig = px.line(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
-    st.plotly_chart(fig)  # Display in Streamlit
-    #return fig
+    plt.plot(df["Year"], df["GDP"], marker='o', linestyle='-')
