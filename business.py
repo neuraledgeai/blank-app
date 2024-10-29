@@ -45,7 +45,7 @@ class Model:
     plt.figure(figsize=(10, 6))
     plt.bar(df["Year"], df["GDP"], color='blue')
     plt.title("GDP Forecast Over the Years")
-    plt.xlabel("Year"        
+    plt.xlabel("Year")        
     plt.ylabel("GDP (in Trillions)")
     plt.xticks(rotation=45)
     plt.grid(axis='y', linestyle='--', alpha=0.7)
