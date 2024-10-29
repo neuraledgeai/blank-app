@@ -1,5 +1,6 @@
 import streamlit as st
 from database import LocalDatabase
+from business import Model
 from display import IndiaGDPApp
 
 #db = LocalDatabase()
