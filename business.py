@@ -40,6 +40,7 @@ class Model:
     df = pd.DataFrame(data).set_index("Year")
 
     ## Plot the graph
-    #fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
-    st.line_chart(df, y = "GDP")
+    fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
+    st.plotly_chart(fig)
+    #st.line_chart(df, y = "GDP")
     #return fig
