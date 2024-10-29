@@ -12,6 +12,6 @@ class IndiaGDPApp:
 
   def forecast(self, years):
     fig =  self.model.makeForecast(years = range(1, 11))
-    st.plotly_chart(fig)
+    st.pyplot(fig)
 
 
