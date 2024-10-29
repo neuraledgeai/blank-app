@@ -41,4 +41,5 @@ class Model:
     df = pd.DataFrame(data)
 
     ## Plot the graph
-    plt.plot(df["Year"], df["GDP"], marker='o', linestyle='-')
+    fig = plt.plot(df["Year"], df["GDP"], marker='o', linestyle='-')
+    st.pyplot(fig)
