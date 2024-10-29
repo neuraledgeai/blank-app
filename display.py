@@ -4,9 +4,9 @@ import plotly.express as px
 
 class IndiaGDPApp:
   def __init__(
-    #model = Model()
+    model = Model()
   ):
-    self.model = Model()
+    self.model = model
 
   def forecast(self, years):
     forcast_data =  self.model.makeForecast(years = range(1, 11))
