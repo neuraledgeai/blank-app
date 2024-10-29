@@ -30,7 +30,7 @@ class Model:
       gdp = predicted_gdp[0]
       
       # Add predicted_gdp and corresponding_year to predicted_gdps and corresponding_years lists
-      predicted_gdps.append(predicted_gdp)
+      predicted_gdps.append(predicted_gdp / 1e12)
       corresponding_years.append(corresponding_year)
 
     data = {
