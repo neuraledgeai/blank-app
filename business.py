@@ -21,7 +21,7 @@ class Model:
       X = np.array([[gdp]])
 
       # Make prediction and update the corresponding year and gdp
-      predicted_gdp = model.predict(X)
+      predicted_gdp = self.model.predict(X)
       corresponding_year = corresponding_year + 1
       gdp = predicted_gdp[0]
       
