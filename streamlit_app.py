@@ -6,7 +6,7 @@ from display import IndiaGDPApp
 #db = LocalDatabase()
 #df = db.getDataFrame()
 
-#model = Model()
+model = Model()
 # When it is 1, it means 0. 
 #forcasted_df = model.makeForecast(years = range(1, 11))
 
