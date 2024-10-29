@@ -35,6 +35,6 @@ class Model:
       "Year" : corresponding_years,
       "GDP" : predicted_gdps
     }
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data).set_index("Year")
     
     return df
