@@ -4,6 +4,7 @@ import plotly.express as px
 
 class IndiaGDPApp:
   def __init__(
+    self,
     model = Model()
   ):
     self.model = model
