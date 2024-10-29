@@ -40,5 +40,5 @@ class Model:
 
     ## Plot the graph
     #fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
-    fig = df.plot()
-    return fig
+    st.line_chart(df)
+    #return fig
