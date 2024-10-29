@@ -16,4 +16,4 @@ st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
 #st.dataframe(forcasted_df)
-st.plotly_chart(app.forecast(years = 11))
+st.pyplot(app.forecast())
