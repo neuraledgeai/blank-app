@@ -10,14 +10,17 @@ class IndiaGDPApp:
     self.model = model
 
   def forecast(self, years):
-    forecasted_df =  self.model.makeForecast(years = range(1, years))
+    df =  self.model.makeForecast(years = range(1, years))
     
     # Plot India's GDP
-    fig = px.line(forecasted_df.reset_index(), x='Year', y='GDP', 
-                   title="India's GDP from 1961 to 2023",
-                   labels={'GDP': 'GDP (in Trillions of USD)', 'Year': 'Year'},
-                   markers=True
-                  )
+    fig = px.line(
+      df,
+      x = df.index,
+      y = "GDP", 
+      title="India's GDP from 1961 to 2023",
+      labels={'GDP': 'GDP (in Trillions of USD)', 'Year': 'Year'},
+      markers=True
+    )
     # Show the plot
     #st.plotly_chart(fig)
     return fig
