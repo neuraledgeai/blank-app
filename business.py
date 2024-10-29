@@ -37,10 +37,10 @@ class Model:
       "Year" : corresponding_years,
       "GDP" : predicted_gdps
     }
-    df = pd.DataFrame(data).set_index("Year")
+    df = pd.DataFrame(data)
 
     ## Plot the graph
-    fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
+    fig = px.line(df, x="Year", y="GDP", title='GDP Over the Years')
     st.plotly_chart(fig)
     #st.line_chart(df, y = "GDP")
     #return fig
