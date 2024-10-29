@@ -42,11 +42,14 @@ class Model:
 
     ## Plot the graph
     #st.bar_chart(df, x = "Year", y = "GDP")
-    plt.figure(figsize=(10, 6))
-    plt.bar(df["Year"], df["GDP"], color='blue')
-    plt.title("GDP Forecast Over the Years")
-    plt.xlabel("Year")        
-    plt.ylabel("GDP (in Trillions)")
-    plt.xticks(rotation=45)
-    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.bar(df["Year"], df["GDP"], color='blue')
+    ax.set_title("GDP Forecast Over the Years")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("GDP (in Trillions)")
+    ax.set_xticks(df["Year"])
+    ax.set_xticklabels(df["Year"], rotation=45)
+    ax.grid(axis='y', linestyle='--', alpha=0.7)
 
+    # Display the plot in Streamlit
+    st.pyplot(fig)
