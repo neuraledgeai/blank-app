@@ -1,6 +1,7 @@
 import joblib
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 class Model:
   def __init__(
@@ -36,5 +37,7 @@ class Model:
       "GDP" : predicted_gdps
     }
     df = pd.DataFrame(data).set_index("Year")
-    
-    return df
+
+    ## Plot the graph
+    fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
+    return fig
