@@ -15,8 +15,8 @@ class IndiaGDPApp:
     # Plot India's GDP
     fig = px.line(
       df,
-      x = df.index,
-      y = "GDP", 
+      #x = df.index,
+      #y = "GDP", 
       title="India's GDP from 1961 to 2023",
       labels={'GDP': 'GDP (in Trillions of USD)', 'Year': 'Year'},
       markers=True
