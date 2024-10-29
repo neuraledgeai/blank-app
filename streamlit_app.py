@@ -17,4 +17,4 @@ st.write(
 )
 #st.dataframe(forcasted_df)
 #app.forecast(years = 11)
-model.makeForecast(years = 11)
+model.makeForecast(years = range(1,11))
