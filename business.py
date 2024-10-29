@@ -41,4 +41,4 @@ class Model:
     df = pd.DataFrame(data)
 
     ## Plot the graph
-    st.line_chart(df, x = "Year", y = "GDP")
+    st.bar_chart(df, x = "Year", y = "GDP")
