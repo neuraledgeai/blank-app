@@ -20,9 +20,10 @@ class Model:
       # Prepare data
       X = np.array([[gdp]])
 
-      # Make prediction and update the corresponding year 
+      # Make prediction and update the corresponding year and gdp
       predicted_gdp = model.predict(X)
       corresponding_year = corresponding_year + 1
+      gdp = predicted_gdp[0]
       
       # Add predicted_gdp and corresponding_year to predicted_gdps and corresponding_years lists
       predicted_gdps.append(predicted_gdp)
