@@ -39,5 +39,6 @@ class Model:
     df = pd.DataFrame(data).set_index("Year")
 
     ## Plot the graph
-    fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
+    #fig = px.line(df, x=df.index, y='GDP', title='GDP Over the Years')
+    fig = df.plot()
     return fig
