@@ -18,9 +18,7 @@ class Model:
     predicted_gdps = []
     corresponding_years = []
 
-    years_str = str(years)
-    
-    for year in years_str:
+    for year in years:
       # Prepare data
       X = np.array([[gdp]])
 
