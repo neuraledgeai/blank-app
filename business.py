@@ -44,5 +44,5 @@ class Model:
 
     ## Plot the graph
     #st.bar_chart(df, x = "Year", y = "GDP")
-    fig = px.line(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
+    fig = px.bar(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
     st.plotly_chart(fig)
