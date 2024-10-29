@@ -49,3 +49,16 @@ class Model:
     fig1 = px.line(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
     st.plotly_chart(fig)
     st.plotly_chart(fig1)
+    
+    # Plot with matplotlib
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.bar(df["Year"], df["GDP"], color='blue')
+    ax.set_title("GDP Forecast Over the Years")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("GDP (in Trillions)")
+    ax.set_xticks(df["Year"])
+    ax.set_xticklabels(df["Year"], rotation=45)
+    ax.grid(axis='y', linestyle='--', alpha=0.7)
+
+    # Display the plot in Streamlit
+    st.pyplot(fig)
