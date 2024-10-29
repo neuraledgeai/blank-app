@@ -1,4 +1,4 @@
-from bussiness import Model
+from business import Model
 import streamlit as st
 import plotly.express as px
 
