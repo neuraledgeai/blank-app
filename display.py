@@ -39,7 +39,7 @@ class PresentationComponents:
         title={
             'text': f"GDP Forecast Over the Next {years-1} Years",
             'y':0.9,
-            'x':0.5,
+            'x':0.9,
             'xanchor': 'center',
             'yanchor': 'top'
         },
