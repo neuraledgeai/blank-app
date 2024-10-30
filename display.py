@@ -23,40 +23,24 @@ class PresentationComponents:
     df =  self.model.makeForecast(years = range(1, years))
 
     # Plot figure
-    #fig = px.line(df, x="Year", y="GDP", title=f"GDP Forecast Over the Next {years-1} Years")
-    #st.plotly_chart(fig)
-    # Create the line plot with customized settings
     fig = px.line(
         df, 
         x="Year", 
         y="GDP", 
-        #title=f"GDP Forecast Over the Next {years-1} Years",
-        markers=True  # Adds markers to each data point for better visibility
+        title=f"GDP Forecast Over the Next {years-1} Years",
+        markers=True
     )
-    
-    # Customize layout for improved appearance
     fig.update_layout(
-        title={
-            'text': f"GDP Forecast Over the Next {years-1} Years",
-            'y':0.9,
-            'x':0.5,
-            'xanchor': 'center',
-            'yanchor': 'top'
-        },
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
-        template="plotly_white",  # Use a clean white theme
+        template="plotly_white",
         xaxis=dict(
-            tickmode='linear',  # Ensure every year is shown
+            tickmode="linear",
             tickangle=45,
         )
     )
-    
-    # Update line style and markers for better visibility
     fig.update_traces(
-        line=dict(color='royalblue', width=3),  # Set line color and width
-        marker=dict(size=8, color='darkblue')        # Make markers larger and red for emphasis
+        line=dict(color="royalblue", width=3),  
+        marker=dict(size=8, color="darkblue")
     )
-    
-    # Display the improved chart in Streamlit
     st.plotly_chart(fig)
