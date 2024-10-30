@@ -11,7 +11,7 @@ class PresentationComponents:
     self.model = model
 
   def forecast(self):
-    df =  self.model.makeForecast(years = range(1, age))
+    df =  self.model.makeForecast(years = range(1, 11))
     
     fig = px.bar(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
     fig1 = px.line(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
