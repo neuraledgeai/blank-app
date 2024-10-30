@@ -57,8 +57,8 @@ class PresentationComponents:
         textposition='outside'  # Place labels outside bars for clarity
     )
 
-# Display the improved bar chart in Streamlit
-st.plotly_chart(fig)
+    # Display the improved bar chart in Streamlit
+    st.plotly_chart(fig)
 
   def forecast_line_chart(self, years):
     # Get dataframe
