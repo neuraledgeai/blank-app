@@ -49,10 +49,6 @@ class PresentationComponents:
         xaxis=dict(
             tickmode='linear',  # Ensure every year is shown
             tickangle=45,
-        ),
-        yaxis=dict(
-            tickformat=".2f",  # Format y-axis for trillions
-            gridcolor="lightgrey"
         )
     )
     
