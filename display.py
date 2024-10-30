@@ -41,7 +41,7 @@ class PresentationComponents:
             #'y':0.9,
             #'x':0.5,
             'xanchor': 'center',
-            #'yanchor': 'top'
+            'yanchor': 'top'
         },
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
