@@ -38,8 +38,9 @@ class PresentationComponents:
         texttemplate="%{text:.2s}",
         textposition="outside" 
     )
-    if(years > 15):
-      st.warning('This is a warning', icon="⚠️")
+    if(years > 17):
+      st.warning("Forecasting too far into the future may reduce accuracy.", icon="⚠️")
+      
     st.plotly_chart(fig)
 
   def forecast_line_chart(self, years):
@@ -67,4 +68,7 @@ class PresentationComponents:
         line=dict(color="royalblue", width=3),  
         marker=dict(size=8, color="darkblue")
     )
+    if(years > 17):
+      st.warning("Forecasting too far into the future may reduce accuracy.", icon="⚠️")
+      
     st.plotly_chart(fig)
