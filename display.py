@@ -3,15 +3,15 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 
-class IndiaGDPApp:
+class PresentationComponents:
   def __init__(
     self,
     model = Model()
   ):
     self.model = model
 
-  def forecast(self, years):
-    fig =  self.model.makeForecast(years = range(1, 11))
+  def forecast(self):
+    df =  self.model.makeForecast(years = range(1, 11))
     st.pyplot(fig)
 
 
