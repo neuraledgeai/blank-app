@@ -38,8 +38,8 @@ class PresentationComponents:
     fig.update_layout(
         title={
             'text': f"GDP Forecast Over the Next {years-1} Years",
-            'y':0.9,
-            'x':0.9,
+            'y':0.1,
+            'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top'
         },
