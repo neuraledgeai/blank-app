@@ -18,6 +18,6 @@ st.write(
 )
 #st.dataframe(forcasted_df)
 #app.forecast(years = 11)
-st.header("GDP Forecast : blue[Bar Chart]")
+st.subheader("GDP Forecast :blue[Bar Chart]")
 years = st.slider("Number of years to forecast", 0, 20, 5)
 pc.forecast_bar_chart(years = years+1)
