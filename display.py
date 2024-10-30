@@ -32,7 +32,7 @@ class PresentationComponents:
         )
     )
     fig.update_traces(
-        marker_color="blue",  
+        marker_color="dodgerblue",  
         marker_line_color="black",  
         marker_line_width=1.5,
         texttemplate="%{text:.2s}",
