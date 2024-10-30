@@ -12,6 +12,8 @@ class PresentationComponents:
 
   def forecast(self):
     df =  self.model.makeForecast(years = range(1, 11))
-    st.pyplot(fig)
-
-
+    
+    fig = px.bar(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
+    fig1 = px.line(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
+    st.plotly_chart(fig)
+    st.plotly_chart(fig1)
