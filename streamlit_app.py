@@ -19,4 +19,5 @@ st.write(
 #st.dataframe(forcasted_df)
 #app.forecast(years = 11)
 #model.makeForecast(years = range(1,11))
-pc.forecast()
+years = st.slider("Years", 0, 20, 5)
+pc.forecast(years = years)
