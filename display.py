@@ -38,7 +38,7 @@ class PresentationComponents:
     fig.update_layout(
         title={
             'text': f"GDP Forecast Over the Next {years-1} Years",
-            'y':0.1,
+            'y':0.9,
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top'
@@ -55,7 +55,7 @@ class PresentationComponents:
     # Update line style and markers for better visibility
     fig.update_traces(
         line=dict(color='royalblue', width=3),  # Set line color and width
-        marker=dict(size=8, color='red')        # Make markers larger and red for emphasis
+        marker=dict(size=8, color='darkblue')        # Make markers larger and red for emphasis
     )
     
     # Display the improved chart in Streamlit
