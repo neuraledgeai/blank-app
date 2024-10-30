@@ -15,15 +15,12 @@ class PresentationComponents:
     df =  self.model.makeForecast(years = range(1, years))
 
     # Plot figure
-    #fig = px.bar(df, x="Year", y="GDP", title=f"GDP Forecast Over the Next {years-1} Years")
-    #st.plotly_chart(fig)
-    # Create the bar plot with customized settings
     fig = px.bar(
         df, 
         x="Year", 
         y="GDP", 
         title=f"GDP Forecast Over the Next {years-1} Years",
-        text="GDP"  # Adds GDP values as labels on top of each bar
+        text="GDP"
     )
     
     # Customize layout for improved appearance
@@ -41,10 +38,6 @@ class PresentationComponents:
         xaxis=dict(
             tickmode='linear',
             tickangle=45  # Rotate x-axis labels for readability
-        ),
-        yaxis=dict(
-            tickformat=".2f",  # Format y-axis for trillions
-            gridcolor="lightgrey"
         )
     )
     
