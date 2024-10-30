@@ -1,12 +1,13 @@
 import streamlit as st
 from database import LocalDatabase
 from business import Model
-from display import IndiaGDPApp
+from display import PresentationComponents
 
+pc = PresentationComponents()
 #db = LocalDatabase()
 #df = db.getDataFrame()
 
-model = Model()
+#model = Model()
 # When it is 1, it means 0. 
 #forcasted_df = model.makeForecast(years = range(1, 11))
 
@@ -17,4 +18,5 @@ st.write(
 )
 #st.dataframe(forcasted_df)
 #app.forecast(years = 11)
-model.makeForecast(years = range(1,11))
+#model.makeForecast(years = range(1,11))
+pc.forecast()
