@@ -22,8 +22,6 @@ class PresentationComponents:
         title=f"GDP Forecast Over the Next {years-1} Years",
         text="GDP"
     )
-    
-    # Customize layout for improved appearance
     fig.update_layout(
         title={
             'text': f"GDP Forecast Over the Next {years-1} Years",
@@ -34,23 +32,19 @@ class PresentationComponents:
         },
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
-        template="plotly_white",  # Use a clean white theme
+        template="plotly_white",
         xaxis=dict(
             tickmode='linear',
-            tickangle=45  # Rotate x-axis labels for readability
+            tickangle=45
         )
     )
-    
-    # Update bar style and text position for better visibility
     fig.update_traces(
-        marker_color='dodgerblue',  # Use a visually pleasing blue color for bars
-        marker_line_color='black',  # Add a black outline to bars
+        marker_color="dodgerblue",  
+        marker_line_color="black",  
         marker_line_width=1.5,
-        texttemplate='%{text:.2s}',  # Format GDP values on bars
-        textposition='outside'  # Place labels outside bars for clarity
+        texttemplate="%{text:.2s}",
+        textposition="outside" 
     )
-
-    # Display the improved bar chart in Streamlit
     st.plotly_chart(fig)
 
   def forecast_line_chart(self, years):
