@@ -23,18 +23,11 @@ class PresentationComponents:
         text="GDP"
     )
     fig.update_layout(
-        title={
-            'text': f"GDP Forecast Over the Next {years-1} Years",
-            'y':0.9,
-            'x':0.5,
-            'xanchor': 'center',
-            'yanchor': 'top'
-        },
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
         template="plotly_white",
         xaxis=dict(
-            tickmode='linear',
+            tickmode="linear",
             tickangle=45
         )
     )
