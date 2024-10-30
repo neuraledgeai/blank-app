@@ -10,11 +10,10 @@ class PresentationComponents:
   ):
     self.model = model
 
-  def forecast(self):
-    df =  self.model.makeForecast(years = range(1, 11))
+  def forecast(self, years):
+    df =  self.model.makeForecast(years = range(1, years))
     
     fig = px.bar(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
     fig1 = px.line(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
     st.plotly_chart(fig)
-    age = st.slider("Years", 0, 20, 5)
     st.plotly_chart(fig1)
