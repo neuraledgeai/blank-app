@@ -39,6 +39,8 @@ class PresentationComponents:
         textposition="outside" 
     )
     st.plotly_chart(fig)
+    if(years > 15):
+      st.warning('This is a warning', icon="⚠️")
 
   def forecast_line_chart(self, years):
     # Get dataframe
