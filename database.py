@@ -22,7 +22,7 @@ class LocalDatabase:
 
     df["Year"] = df["Year"].astype(int)
     df["GDP"] = df["GDP"].astype(float)
-    df["GDP_L1"] = df["GDP"].astype(float)
+    df["GDP_L1"] = df["GDP_L1"].astype(float)
     
     return df
   
