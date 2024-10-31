@@ -82,7 +82,7 @@ class PresentationComponents:
     df = df.reset_index()
     fig = px.line(df, x="Year", y=["GDP", "Predicted GDP"], title="Actual vs Predicted GDP Over Time")
     fig.update_layout(xaxis_title="Year", yaxis_title="GDP (in Trillions)")
-    st.plotly_chart(fig)
     fig.update_traces(
       mode="lines+markers",  # Add markers on the lines for readability
     )
+    st.plotly_chart(fig)
