@@ -46,8 +46,21 @@ class Model:
     return df
 
   def predict(self):
+    # Prepare data
     db = LocalDatabase()
     df = db.loadData()
+
+    # Split
+    feature = ["GDP"]
+    X = df[feature]
+
     
-    return df
+    df_pred_test = pd.DataFrame(
+      {
+        "Year": 
+        "GDP" : y_test_split,
+        "GDP_Forecasted" : model_lr.predict(X_test_split)
+      }
+    )
+    return df_pred_test
   
