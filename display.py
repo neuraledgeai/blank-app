@@ -72,3 +72,7 @@ class PresentationComponents:
       st.warning("Forecasting too far into the future may reduce accuracy.", icon="⚠️")
       
     st.plotly_chart(fig)
+
+  def modelPerformance(self):
+    df = self.model.predict()
+    return df
