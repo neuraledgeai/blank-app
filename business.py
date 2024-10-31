@@ -4,6 +4,7 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
+from database import LocalDatabase
 
 class Model:
   def __init__(
@@ -43,3 +44,10 @@ class Model:
     df["GDP"] = df["GDP"].astype(float)
     
     return df
+
+  def predict(self):
+    db = LocalDatabase()
+    df = db.loadData()
+    
+    return df
+  
