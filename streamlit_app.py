@@ -18,5 +18,6 @@ st.write(
 #st.dataframe(df)
 #app.forecast(years = 11)
 #st.subheader("GDP Forecast :blue[Bar Chart]")
-#years = st.slider("Forecast Horizon", 0, 20, 5)
-#pc.forecast_line_chart(years = years+1)
+years = st.slider("Forecast Horizon", 0, 20, 5)
+pc.forecast_line_chart(years = years+1)
+pc.forecast_bar_chart(years = years+1)
