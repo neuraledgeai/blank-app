@@ -87,14 +87,6 @@ class PresentationComponents:
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
         template="plotly_white",
-        xaxis=dict(
-            tickmode='linear',
-            tickangle=45
-        ),
-        yaxis=dict(
-            tickformat=".2f",
-            gridcolor="lightgrey"
-        ),
         legend_title_text="GDP Type"
     )
     st.plotly_chart(fig)
