@@ -17,7 +17,7 @@ class LocalDatabase:
     )
     df = df.set_index("Year").drop(columns=["Country Name", "Country Code", "Indicator Name", "Indicator Code"])
     # Adding a new feature for GDP_L1
-    df['GDP_L1'] = df['GDP'].shift(1)
+    df["GDP_L1"] = df["GDP"].shift(1)
     df = df.dropna()  # Drop rows with NaN values resulting from the shift
 
     df["GDP"] = df["GDP"].astype(float)
