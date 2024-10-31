@@ -5,6 +5,7 @@ import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
 from database import LocalDatabase
+import pandas as pd
 
 class Model:
   def __init__(
