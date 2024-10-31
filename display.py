@@ -77,4 +77,7 @@ class PresentationComponents:
     st.subheader("Hi")
     df = self.model.predict()
     
-    #st.plotly_chart(fig)
+    # Reset the index to make 'Year' a column
+    df = df.reset_index()
+    fig = px.line(df, x="Year", y=["GDP", "Predicted GDP"], title="Actual vs Predicted GDP Over Time")
+    st.plotly_chart(fig)
