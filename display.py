@@ -75,4 +75,10 @@ class PresentationComponents:
 
   def modelPerformance(self):
     df = self.model.predict()
-    return df
+    fig = px.line(
+      df,
+      x="Year",
+      y=["GDP", "Predicted GDP"],
+      title="Actual vs Predicted GDP Over Time"
+    )
+    st.plotly_chart(fig)
