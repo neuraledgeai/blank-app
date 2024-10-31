@@ -80,8 +80,6 @@ class PresentationComponents:
     
     # Reset the index to make 'Year' a column
     df = df.reset_index()
-    fig, ax = plt.subplots()
-    df['GDP'].plot(ax=ax, color="blue", linewidth=2, label="Actual GDP")
-    df['Predicted GDP'].plot(ax=ax, color="red", linewidth=2, linestyle='--', label="Predicted GDP")
+    fig = px.line(df, x="Year", y=["GDP", "Predicted GDP"], title="Actual vs Predicted GDP Over Time")
 
     st.plotly_chart(fig)
