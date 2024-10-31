@@ -3,14 +3,14 @@ from database import LocalDatabase
 from business import Model
 from display import PresentationComponents
 
-#pc = PresentationComponents()
+pc = PresentationComponents()
 #db = LocalDatabase()
 #df = db.getDataFrame()
 
-model = Model()
+#model = Model()
 # When it is 1, it means 0. 
 #forcasted_df = model.makeForecast(years = range(1, 11))
-df = model.predict()
+df = pc.modelPerformance()
 st.title(f"From Data Server {df.dtypes} okay sjjsss")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
