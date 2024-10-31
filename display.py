@@ -74,6 +74,7 @@ class PresentationComponents:
     st.plotly_chart(fig)
 
   def modelPerformance(self):
+    st.subheader("Hi")
     df = self.model.predict()
     fig = px.line(
       df,
