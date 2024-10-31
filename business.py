@@ -53,13 +53,13 @@ class Model:
 
     # Split
     feature = ["GDP"]
-    X = df[feature]
+    GDP_L1 = df[feature] # Because GDP_L1 is the feature name seen at the fit time.
 
     
     df_pred_test = pd.DataFrame(
       {
-        "GDP" : X,
-        "GDP_Forecasted" : self.model.predict(X)
+        "GDP" : GDP_L1,
+        "GDP_Forecasted" : self.model.predict(GDP_L1)
       }
     )
     return df_pred_test
