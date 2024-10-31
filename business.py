@@ -52,7 +52,15 @@ class Model:
     df = db.loadData()
 
     # Split
-    #feature = ["GDP"]
-    #GDP_L1 = df[feature] # Because GDP_L1 is the feature name seen at the fit time.
-    return df
+    feature = ["GDP_L1"]
+    X = df[feature]
+    
+    # Result
+    result = pd.DataFrame(
+      {
+        "GDP" : df["GDP"],
+        "Predicted GDP" : self.model.predict(X)
+      }
+    )
+    return result
   
