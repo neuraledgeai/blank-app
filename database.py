@@ -19,7 +19,7 @@ class LocalDatabase:
     df = df.drop(columns=["Country Name", "Country Code", "Indicator Name", "Indicator Code"])
     # Adding a new feature for GDP_L1
     #dataFrame['GDP_L1'] = dataFrame['GDP'].shift(1)
-    $dataFrame = dataFrame.dropna()  # Drop rows with NaN values resulting from the shift
+    #dataFrame = dataFrame.dropna()  # Drop rows with NaN values resulting from the shift
 
     return df
   
