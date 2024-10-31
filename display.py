@@ -80,7 +80,7 @@ class PresentationComponents:
     
     # Reset the index to make 'Year' a column
     df = df.reset_index()
-    fig, ax = plt.subplots(figsize=(15, 6))
+    fig, ax = plt.subplots()
     df['GDP'].plot(ax=ax, color="blue", linewidth=2, label="Actual GDP")
     df['Predicted GDP'].plot(ax=ax, color="red", linewidth=2, linestyle='--', label="Predicted GDP")
 
