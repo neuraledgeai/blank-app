@@ -58,9 +58,8 @@ class Model:
     
     df_pred_test = pd.DataFrame(
       {
-        "Year": 
         "GDP" : y_test_split,
-        "GDP_Forecasted" : model_lr.predict(X_test_split)
+        "GDP_Forecasted" : self.model.predict(X)
       }
     )
     return df_pred_test
