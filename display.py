@@ -75,17 +75,29 @@ class PresentationComponents:
     st.plotly_chart(fig)
 
   def modelPerformance(self):
-    st.subheader("Model Performance")
+    # Get dataframe
     df = self.model.predict()
+
+    # Reset the index to make 'Year' a column
     df = df.reset_index()
     
+    # Subheader
+    st.subheader("Model Performance")
+    
+    # Plot figure
     fig = px.line(df, x="Year", y=["GDP", "Predicted GDP"], title="Actual vs Predicted GDP Over Time")
     fig.update_layout(xaxis_title="Year", yaxis_title="GDP (in Trillions)")
     st.plotly_chart(fig)
-    st.dataframe(df)
     
   def downloadData(self, years):
-    st.subheader("Download Predicted GDP")
     # Get dataframe
     df =  self.model.makeForecast(years = range(1, years))
+    
+    # Subheader
+    st.subheader("Download Predicted GDP Data")
+    
+    # Information
+    st.write("Download the predicted GDP data as a csv file.")
+    
+    # Dataframe
     st.dataframe(df)
