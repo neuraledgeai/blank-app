@@ -79,18 +79,8 @@ class PresentationComponents:
     
     # Reset the index to make 'Year' a column
     df = df.reset_index()
-    fig = px.line(df, x="Year", y=["GDP", "Predicted GDP"], title="Actual vs Predicted GDP Over Time")
-    fig.update_layout(
-        title={
-            'text': "Actual vs Predicted GDP Over Time",
-            'y':0.9,
-            'x':0.5,
-            'xanchor': 'center',
-            'yanchor': 'top'
-        },
-        xaxis_title="Year",
-        yaxis_title="GDP (in Trillions)",
-        template="plotly_white",
-        legend_title_text="GDP Type"
-    )
+    fig, ax = plt.subplots(figsize=(15, 6))
+    df['GDP'].plot(ax=ax, color="blue", linewidth=2, label="Actual GDP")
+    df['Predicted GDP'].plot(ax=ax, color="red", linewidth=2, linestyle='--', label="Predicted GDP")
+
     st.plotly_chart(fig)
