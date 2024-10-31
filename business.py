@@ -59,6 +59,7 @@ class Model:
     result = pd.DataFrame(
       {
         "GDP" : df["GDP"],
+        "GDP_L1" : X,
         "Predicted GDP" : self.model.predict(X)
       }
     )
