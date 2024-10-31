@@ -20,7 +20,6 @@ class LocalDatabase:
     df['GDP_L1'] = df['GDP'].shift(1)
     df = df.dropna()  # Drop rows with NaN values resulting from the shift
 
-    df["Year"] = df["Year"].astype(int)
     df["GDP"] = df["GDP"].astype(float)
     df["GDP_L1"] = df["GDP_L1"].astype(float)
     
