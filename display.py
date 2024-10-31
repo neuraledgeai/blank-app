@@ -25,7 +25,11 @@ class PresentationComponents:
     fig.update_layout(
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
-        template="plotly_white"
+        template="plotly_white",
+        xaxis=dict(
+          tickmode="linear",
+          tickangle=45,
+        )
     )
     fig.update_traces(
         marker_color="dodgerblue",  
