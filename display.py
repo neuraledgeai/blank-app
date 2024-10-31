@@ -82,3 +82,9 @@ class PresentationComponents:
     fig = px.line(df, x="Year", y=["GDP", "Predicted GDP"], title="Actual vs Predicted GDP Over Time")
     fig.update_layout(xaxis_title="Year", yaxis_title="GDP (in Trillions)")
     st.plotly_chart(fig)
+    
+  def downloadData(self, years):
+    st.subheader("Download Predicted GDP")
+    # Get dataframe
+    df =  self.model.makeForecast(years = range(1, years))
+    st.dataframe(df)
