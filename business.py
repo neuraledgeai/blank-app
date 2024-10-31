@@ -41,13 +41,5 @@ class Model:
     df = pd.DataFrame(data)
     df["Year"] = df["Year"].astype(int)
     df["GDP"] = df["GDP"].astype(float)
-
-    ## Plot the graph
-    #st.line_chart(df, x = "Year", y = "GDP")
-    #st.bar_chart(df, x = "Year", y = "GDP")
     
-    #fig = px.bar(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
-    #fig1 = px.line(df, x="Year", y="GDP", title="GDP Forecast Over the Years")
-    #st.plotly_chart(fig)
-    #st.plotly_chart(fig1)
     return df
