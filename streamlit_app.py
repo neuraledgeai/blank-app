@@ -3,6 +3,18 @@ from database import LocalDatabase
 from business import Model
 from display import PresentationComponents
 
+st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 pc = PresentationComponents()
 #years = st.slider("Forecast Horizon", 0, 20, 5)
 #pc.forecast_line_chart(years = years+1)
