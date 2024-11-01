@@ -12,7 +12,7 @@ from display import PresentationComponents
 st.sidebar.header("Navigate the Dashboard")
 navigation = st.sidebar.radio(
     "What's your favorite movie genre",
-    ["GDP Forecast Bar Chart", "**GDP Forecast Line Chart**", "Download Forecast Data :movie_camera:"],
+    ["GDP Forecast :blue[Bar Chart]", "**GDP Forecast Line Chart**", "Download Forecast Data :movie_camera:"],
     captions=[
         "Laugh out loud.",
         "Get the popcorn.",
