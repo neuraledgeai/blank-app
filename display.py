@@ -102,6 +102,7 @@ class PresentationComponents:
     fig = px.line(df, x="Year", y=["GDP", "Predicted GDP"], title="Actual vs Predicted GDP Over Time")
     fig.update_layout(xaxis_title="Year", yaxis_title="GDP (in Trillions)")
     st.plotly_chart(fig)
+    st.write("This graph compares the actual GDP with the GDP predicted by the model. The closer the lines, the more accurate the model's predictions.")
     
   def downloadData(self, years):
     # Get dataframe
