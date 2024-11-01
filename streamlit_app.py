@@ -14,9 +14,9 @@ navigation = st.sidebar.radio(
     "What's your favorite movie genre",
     ["GDP Forecast :blue[Bar Chart]", "GDP Forecast :blue[Line Chart]", "Model Performance"],
     captions=[
-        "Laugh out loud.",
-        "Get the popcorn.",
-        "Never stop learning.",
+        "Visual Representation",
+        "Visual Representation.",
+        "Visual Representation",
     ],
 )
 # Home section
