@@ -21,5 +21,6 @@ navigation = st.sidebar.radio(
 )
 # Home section
 if navigation == "GDP Forecast :blue[Bar Chart]":
+    st.subheader("GDP Forecast :blue[Bar Chart]")
     years = st.slider("Forecast Horizon", 0, 20, 5)
     pc.forecast_bar_chart(years = years+1)
