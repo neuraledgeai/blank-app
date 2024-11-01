@@ -8,3 +8,5 @@ from display import PresentationComponents
 #pc.forecast_line_chart(years = years+1)
 #pc.forecast_bar_chart(years = years+1)
 #pc.downloadData(years = years+1)
+
+st.sidebar.header("Navigate the Dashboard")
