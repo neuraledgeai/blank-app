@@ -24,4 +24,4 @@ if navigation == "GDP Forecast :blue[Bar Chart]":
     st.subheader("GDP Forecast :blue[Bar Chart]")
     years = st.slider("Forecast Horizon", 0, 20, 5)
     pc.forecast_bar_chart(years = years+1)
-    st.write(f"The Bar Chart provides a visual representation of India’s projected GDP growth over the next {years-1} years. Each bar represents a specific year's forecasted GDP value, displayed in trillions of US dollars.")
+    st.write(f"The Bar Chart provides a visual representation of India’s projected GDP growth over the next {years} years. Each bar represents a specific year's forecasted GDP value, displayed in trillions of US dollars.")
