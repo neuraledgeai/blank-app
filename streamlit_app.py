@@ -9,7 +9,7 @@ pc = PresentationComponents()
 #pc.forecast_bar_chart(years = years+1)
 #pc.downloadData(years = years+1)
 
-st.sidebar.header("Navigate the Dashboard Yes")
+st.sidebar.header("Navigate the Dashboard Ye")
 navigation = st.sidebar.radio(
     "Dive into the Data!",
     ["GDP Forecast :blue[Bar Chart]", "GDP Forecast :blue[Line Chart]", "Model Performance", "Download Forecasted Data"],
