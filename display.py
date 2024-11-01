@@ -116,3 +116,9 @@ class PresentationComponents:
     
     # Dataframe
     st.dataframe(df)
+    
+    st.markdown("""
+    <div style="text-align: center; font-size: 0.8em; color: grey;">
+    The model is trained on data only up to 2023, so predictions may vary due to future uncertainties. Please verify important information independently.
+    </div>
+    """, unsafe_allow_html=True)
