@@ -4,10 +4,8 @@ from business import Model
 from display import PresentationComponents
 
 st.set_page_config(
-    page_title="Ex-stream-ly Cool App",
-    page_icon="🧊",
+    page_title="India GDP Forecasting Tool",
     layout="wide",
-    initial_sidebar_state="collapsed",
 )
 
 pc = PresentationComponents()
