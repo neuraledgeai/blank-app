@@ -5,7 +5,7 @@ from display import PresentationComponents
 
 st.set_page_config(
     page_title="India GDP Forecasting Tool",
-    page_icon="❤️"
+    page_icon="❤️",
     layout="wide",
 )
 
