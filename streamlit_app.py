@@ -3,7 +3,7 @@ from database import LocalDatabase
 from business import Model
 from display import PresentationComponents
 
-#pc = PresentationComponents()
+pc = PresentationComponents()
 #years = st.slider("Forecast Horizon", 0, 20, 5)
 #pc.forecast_line_chart(years = years+1)
 #pc.forecast_bar_chart(years = years+1)
@@ -19,3 +19,7 @@ navigation = st.sidebar.radio(
         "Never stop learning.",
     ],
 )
+# Home section
+if navigation == "GDP Forecast Bar Chart":
+    years = st.slider("Forecast Horizon", 0, 20, 5)
+    pc.forecast_bar_chart(years = years+1)
