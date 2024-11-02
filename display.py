@@ -71,7 +71,8 @@ class PresentationComponents:
         xaxis=dict(
             tickmode="linear",
             tickangle=45,
-        )
+        ),
+        dragmode=False
     )
     fig.update_traces(
         line=dict(color="royalblue", width=3),  
