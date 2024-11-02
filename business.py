@@ -79,12 +79,15 @@ class Model:
     fig = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time")
     
     # Select GDP values for 2003 and the last year in the dataset
-    start_year = 2003
+    start_year = 2011
     end_year = 2023
     start_gdp = 607700687237.318
     end_gdp = 3549918918777.53
     fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name='Trendline', line=dict(dash='dash', color='red'))
-    fig.update_layout(
+    
+    fig1 = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time", range_x=[start_year, end_year])
+    fig1.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name="Pre-pandemic trend", line=dict(dash='dash', color='red'))
+    fig1.update_layout(
       legend=dict(
         yanchor="top",
         y=0.99,
@@ -94,8 +97,6 @@ class Model:
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
-    fig1 = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time", range_x=[start_year, end_year])
-    fig1.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name="Pre-pandemic trend", line=dict(dash='dash', color='red'))
     st.plotly_chart(fig1)
     #return fig
   
