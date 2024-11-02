@@ -66,5 +66,9 @@ class Model:
       }
     )
     return result
+
+  def gdpGrowth(self):
+    df = self.db.loadData()
+  
     
   
