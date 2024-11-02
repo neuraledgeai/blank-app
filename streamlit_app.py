@@ -9,12 +9,6 @@ st.set_page_config(
 )
 
 pc = PresentationComponents()
-model = Model()
-db = LocalDatabase()
-#years = st.slider("Forecast Horizon", 0, 20, 5)
-#pc.forecast_line_chart(years = years+1)
-#pc.forecast_bar_chart(years = years+1)
-#pc.downloadData(years = years+1)
 
 st.sidebar.header("Navigate the Dashboard Yes")
 navigation = st.sidebar.radio(
@@ -39,11 +33,6 @@ elif navigation == "GDP Forecast :blue[Line Chart]":
 elif navigation == "Model Performance":
     pc.modelPerformance()
 elif navigation == "Download Forecasted Data":
-    #st.subheader("GDP Forecast :blue[Line Chart]")
     years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.downloadData(years = years+1)
-    model.gdpGrowth()
-    df = db.loadData()
-    df = df.reset_index()
-    st.dataframe(df)
     
