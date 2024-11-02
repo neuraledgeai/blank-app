@@ -26,6 +26,7 @@ navigation = st.sidebar.radio(
 st.sidebar.header("Neural Edge AI")
 st.sidebar.markdown("""
     <div style="text-align: left; font-size: 0.8em; color: grey;">
+    Yo yo
     AI for the Good
     </div>
     """, unsafe_allow_html=True)
