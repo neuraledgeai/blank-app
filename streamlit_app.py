@@ -13,7 +13,7 @@ pc = PresentationComponents()
 st.sidebar.header("Navigate the Dashboard")
 navigation = st.sidebar.radio(
     "Dive into the Data!",
-    ["GDP Forecast :blue[Bar Chart]", "GDP Forecast :blue[Line Chart]", "Model Performance", "Resilient Economy", "Download Forecasted Data"],
+    ["GDP Forecast :blue[Bar Chart]", "GDP Forecast :blue[Line Chart]", "Resilient Economy", "Model Performance", "Download Forecasted Data"],
     captions=[
         "Visual Representation",
         "Visual Representation.",
