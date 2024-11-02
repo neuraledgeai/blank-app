@@ -79,7 +79,7 @@ class Model:
     fig = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time")
     
     # Select GDP values for 2003 and the last year in the dataset
-    start_year = 2011
+    start_year = 2003
     end_year = 2023
     start_gdp = 607700687237.318
     end_gdp = 3549918918777.53
