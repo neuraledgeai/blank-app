@@ -11,8 +11,10 @@ class Model:
   def __init__(
     self,
     model_name = "india_gdp_forecasting_model.pkl"
+    db = LocalDatabase()
   ):
     self.model = joblib.load(model_name)
+    self.db = db
     
   def makeForecast(self, years):
     # This is GDP for 2023, so that we can start predicting from 2024 to the given number of years
@@ -48,8 +50,8 @@ class Model:
 
   def predict(self):
     # Prepare data
-    db = LocalDatabase()
-    df = db.loadData(lag=True)
+    #db = LocalDatabase()
+    df = self.db.loadData(lag=True)
 
     # Split
     feature = ["GDP_L1"]
@@ -64,4 +66,5 @@ class Model:
       }
     )
     return result
+    
   
