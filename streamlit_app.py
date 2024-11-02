@@ -28,15 +28,15 @@ navigation = st.sidebar.radio(
 # Home section
 if navigation == "GDP Forecast :blue[Bar Chart]":
     st.subheader("GDP Forecast :blue[Bar Chart]")
-    years = st.slider("Forecast Horizon", 0, 20, 5)
+    years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.forecast_bar_chart(years = years+1)
 elif navigation == "GDP Forecast :blue[Line Chart]":
     st.subheader("GDP Forecast :blue[Line Chart]")
-    years = st.slider("Forecast Horizon", 0, 20, 5)
+    years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.forecast_line_chart(years = years+1)
 elif navigation == "Model Performance":
     pc.modelPerformance()
 elif navigation == "Download Forecasted Data":
     #st.subheader("GDP Forecast :blue[Line Chart]")
-    years = st.slider("Forecast Horizon", 0, 20, 5)
+    years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.downloadData(years = years+1)
