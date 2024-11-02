@@ -77,9 +77,9 @@ class Model:
     fig = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time")
     
     # Select GDP values for 2000 and the last year in the dataset
-    start_year = 2000
+    start_year = 2003
     end_year = 2023
-    start_gdp = 468395521654.458
+    start_gdp = 607700687237.318
     end_gdp = 3549918918777.53
     fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name='Trendline', line=dict(dash='dash', color='red'))
 
