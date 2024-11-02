@@ -10,7 +10,7 @@ st.set_page_config(
 
 pc = PresentationComponents()
 
-st.sidebar.header("Navigate the Dashboard Yes")
+st.sidebar.header("Navigate the Dashboard")
 navigation = st.sidebar.radio(
     "Dive into the Data!",
     ["GDP Forecast :blue[Bar Chart]", "GDP Forecast :blue[Line Chart]", "Model Performance", "GDP Growth", "Download Forecasted Data"],
@@ -23,6 +23,7 @@ navigation = st.sidebar.radio(
         
     ],
 )
+st.sidebar.header("Neural Edge AI")
 # Home section
 if navigation == "GDP Forecast :blue[Bar Chart]":
     st.subheader("GDP Forecast :blue[Bar Chart]")
