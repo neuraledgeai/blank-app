@@ -6,6 +6,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from database import LocalDatabase
 import pandas as pd
+import plotly.express as px
 
 class Model:
   def __init__(
@@ -69,6 +70,9 @@ class Model:
 
   def gdpGrowth(self):
     df = self.db.loadData()
+    # Reset the index to make 'Year' a column
+    df = df.reset_index()
+    fig = px.line(df, x="Year", y="GDP", title="Actual vs Predicted GDP Over Time")
   
     
   
