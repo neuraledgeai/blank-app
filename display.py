@@ -17,6 +17,7 @@ class PresentationComponents:
 
     # Plot figure
     fig = px.bar(
+        dragmode=False,
         df, 
         x="Year", 
         y="GDP", 
