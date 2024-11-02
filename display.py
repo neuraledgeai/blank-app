@@ -124,3 +124,8 @@ class PresentationComponents:
     The model is trained on data only up to 2023, so predictions may vary due to future uncertainties. Please verify important information independently.
     </div>
     """, unsafe_allow_html=True)
+
+  def resilientEconomy(self):
+    fig, fig1 = self.model.gdpGrowth()
+    st.plotly_chart(fig)
+    st.plotly_chart(fig1)
