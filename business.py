@@ -79,7 +79,7 @@ class Model:
 
     # Plot GDP growth
     fig = px.line(df, x="Year", y="GDP", title="GDP Growth at Current Prices")
-    fig1.update_layout(
+    fig.update_layout(
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
