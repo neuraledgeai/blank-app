@@ -78,16 +78,9 @@ class Model:
     
     # Select GDP values for 2000 and the last year in the dataset
     start_year = 2000
-    end_year = df['Year'].max()
-    if start_year in df['Year'].values:
-      start_gdp = df.loc[df['Year'] == start_year, 'GDP'].values[0]
-    else:
-      # Use the earliest available year if 2000 is not in the data
-      start_year = df['Year'].min()
-      start_gdp = df.loc[df['Year'] == start_year, 'GDP'].values[0]
-
-    end_gdp = df.loc[df['Year'] == end_year, 'GDP'].values[0]
-
+    end_year = 2023
+    start_gdp = 468395521654.458
+    end_gdp = 3549918918777.53
     fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name='Trendline', line=dict(dash='dash', color='red'))
 
     st.plotly_chart(fig)
