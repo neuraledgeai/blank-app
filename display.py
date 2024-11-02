@@ -114,7 +114,7 @@ class PresentationComponents:
     st.subheader("Download Predicted GDP Data")
     
     # Information
-    st.write("Download the predicted GDP data as a csv file.")
+    st.write("Download the predicted GDP data as a csv file. Hover mouse over the dataframe or touch on it to access download option.")
     
     # Dataframe
     st.dataframe(df)
