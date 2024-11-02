@@ -24,6 +24,12 @@ navigation = st.sidebar.radio(
     ],
 )
 st.sidebar.header("Neural Edge AI")
+st.sidebar.markdown("""
+    <div style="text-align: left; font-size: 0.8em; color: grey;">
+    AI for the Good
+    </div>
+    """, unsafe_allow_html=True)
+
 # Home section
 if navigation == "GDP Forecast :blue[Bar Chart]":
     st.subheader("GDP Forecast :blue[Bar Chart]")
