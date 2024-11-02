@@ -9,9 +9,7 @@ st.set_page_config(
 )
 
 pc = PresentationComponents()
-db = LocalDatabase()
-df1 = db.loadData()
-df2 = db.loadData(lag=True)
+model = Model()
 #years = st.slider("Forecast Horizon", 0, 20, 5)
 #pc.forecast_line_chart(years = years+1)
 #pc.forecast_bar_chart(years = years+1)
@@ -43,4 +41,5 @@ elif navigation == "Download Forecasted Data":
     #st.subheader("GDP Forecast :blue[Line Chart]")
     years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.downloadData(years = years+1)
-    st.write(f"df1 {df1.dtypes} ---- df2 {df2.dtypes}")
+    model.gdpGrowth()
+    
