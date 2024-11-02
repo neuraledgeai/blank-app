@@ -95,7 +95,7 @@ class Model:
       yaxis_title="GDP (in Trillions)"
     )
     fig1 = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time", range_x=[start_year, end_year])
-    fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name="Pre-pandemic trend", line=dict(dash='dash', color='red'))
+    fig1.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name="Pre-pandemic trend", line=dict(dash='dash', color='red'))
     st.plotly_chart(fig1)
     #return fig
   
