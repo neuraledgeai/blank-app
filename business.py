@@ -81,7 +81,8 @@ class Model:
     fig = px.line(df, x="Year", y="GDP", title="GDP Growth at Current Prices")
     fig.update_layout(
       xaxis_title="Year",
-      yaxis_title="GDP (in Trillions)"
+      yaxis_title="GDP (in Trillions)",
+      dragmode=False
     )
     st.plotly_chart(fig)
     
@@ -103,7 +104,8 @@ class Model:
         x=0.01
       ),
       xaxis_title="Year",
-      yaxis_title="GDP (in Trillions)"
+      yaxis_title="GDP (in Trillions)",
+      dragmode=False
     )
     st.plotly_chart(fig1)
     #return fig
