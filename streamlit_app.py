@@ -35,4 +35,5 @@ elif navigation == "Model Performance":
 elif navigation == "Download Forecasted Data":
     years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.downloadData(years = years+1)
+    pc.resilientEconomy()
     
