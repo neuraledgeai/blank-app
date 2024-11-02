@@ -83,12 +83,15 @@ class Model:
     end_gdp = 3549918918777.53
     fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name='Trendline', line=dict(dash='dash', color='red'))
 
-    fig.update_layout(legend=dict(
-      yanchor="top",
-      y=0.99,
-      xanchor="left",
-      x=0.01
-    ))
+    fig.update_layout(
+      legend=dict(
+        yanchor="top",
+        y=0.99,
+        xanchor="left",
+        x=0.01
+      ),
+      showlegend=True
+    )
 
 
     st.plotly_chart(fig)
