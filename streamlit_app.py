@@ -10,6 +10,7 @@ st.set_page_config(
 
 pc = PresentationComponents()
 model = Model()
+db = LocalDatabase()
 #years = st.slider("Forecast Horizon", 0, 20, 5)
 #pc.forecast_line_chart(years = years+1)
 #pc.forecast_bar_chart(years = years+1)
@@ -42,4 +43,7 @@ elif navigation == "Download Forecasted Data":
     years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.downloadData(years = years+1)
     model.gdpGrowth()
+    df = db.loadData()
+    df = df.reset_index()
+    st.dataframe(df)
     
