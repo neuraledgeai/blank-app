@@ -72,7 +72,9 @@ class Model:
     df = self.db.loadData()
     # Reset the index to make 'Year' a column
     df = df.reset_index()
-    fig = px.line(df, x="Year", y="GDP", title="Actual vs Predicted GDP Over Time")
+    # Subheader
+    st.subheader("GDP Growth")
+    fig = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time")
     st.plotly_chart(fig)
   
     
