@@ -84,7 +84,7 @@ class Model:
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
-    st.plotly_chart(fig)
+    #st.plotly_chart(fig)
     
     # Data for trend line
     start_year, end_year = 2003, 2023 
@@ -107,8 +107,8 @@ class Model:
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
-    st.plotly_chart(fig1)
-    #return fig
+    #st.plotly_chart(fig1)
+    return fig, fig1
   
     
   
