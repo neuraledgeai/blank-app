@@ -94,7 +94,8 @@ class Model:
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
-    st.plotly_chart(fig)
+    fig1 = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time", range_x=[start_year, end_year])
+    st.plotly_chart(fig1)
     #return fig
   
     
