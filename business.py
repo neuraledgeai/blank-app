@@ -73,9 +73,6 @@ class Model:
     
     # Reset the index to make 'Year' a column
     df = df.reset_index()
-    
-    # Subheader
-    st.subheader("India's GDP Growth Over Time")
 
     # Plot GDP growth
     fig = px.line(df, x="Year", y="GDP", title="GDP Growth at Current Prices")
@@ -84,14 +81,10 @@ class Model:
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
-    #st.plotly_chart(fig)
     
     # Data for trend line
     start_year, end_year = 2003, 2023 
     start_gdp, end_gdp = 607700687237.318, 3549918918777.53
-
-    # Subheader
-    st.subheader("Transitional Growth")
     
     # Plot ransitional growth
     fig1 = px.line(df, x="Year", y="GDP", title="Transitional Growth", range_x=[start_year, end_year])
@@ -107,7 +100,6 @@ class Model:
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
-    #st.plotly_chart(fig1)
     return fig, fig1
   
     
