@@ -75,6 +75,15 @@ class Model:
     # Subheader
     st.subheader("GDP Growth")
     fig = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time")
+    
+    # Select GDP values for 2000 and the last year in the dataset
+    start_year = 2000
+    end_year = df['Year'].max()
+    start_gdp = df.loc[df['Year'] == start_year, 'GDP'].values[0]
+    end_gdp = df.loc[df['Year'] == end_year, 'GDP'].values[0]
+
+    fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name='Trendline', line=dict(dash='dash', color='red'))
+
     st.plotly_chart(fig)
   
     
