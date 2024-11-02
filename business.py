@@ -80,9 +80,9 @@ class Model:
     # Plot GDP growth
     fig = px.line(df, x="Year", y="GDP", title="GDP Growth at Current Prices")
     fig.update_layout(
+      dragmode=False,
       xaxis_title="Year",
-      yaxis_title="GDP (in Trillions)",
-      dragmode=False
+      yaxis_title="GDP (in Trillions)"
     )
     st.plotly_chart(fig)
     
@@ -97,6 +97,7 @@ class Model:
     fig1 = px.line(df, x="Year", y="GDP", title="Transitional Growth", range_x=[start_year, end_year])
     fig1.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name="Transitional growth trend", line=dict(dash='dash', color='red'))
     fig1.update_layout(
+      dragmode=False,
       legend=dict(
         yanchor="top",
         y=0.99,
@@ -104,8 +105,7 @@ class Model:
         x=0.01
       ),
       xaxis_title="Year",
-      yaxis_title="GDP (in Trillions)",
-      dragmode=False
+      yaxis_title="GDP (in Trillions)"
     )
     st.plotly_chart(fig1)
     #return fig
