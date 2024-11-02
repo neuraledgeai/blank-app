@@ -70,19 +70,20 @@ class Model:
 
   def gdpGrowth(self):
     df = self.db.loadData()
+    
     # Reset the index to make 'Year' a column
     df = df.reset_index()
+    
     # Subheader
     st.subheader("GDP Growth")
     fig = px.line(df, x="Year", y="GDP", title="India's GDP Growth Over Time")
     
-    # Select GDP values for 2000 and the last year in the dataset
+    # Select GDP values for 2003 and the last year in the dataset
     start_year = 2003
     end_year = 2023
     start_gdp = 607700687237.318
     end_gdp = 3549918918777.53
     fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name='Trendline', line=dict(dash='dash', color='red'))
-
     fig.update_layout(
       legend=dict(
         yanchor="top",
@@ -90,11 +91,11 @@ class Model:
         xanchor="left",
         x=0.01
       ),
-      showlegend=True
+      xaxis_title="Year",
+      yaxis_title="GDP (in Trillions)"
     )
-
-
     st.plotly_chart(fig)
+    #return fig
   
     
   
