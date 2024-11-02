@@ -17,7 +17,6 @@ class PresentationComponents:
 
     # Plot figure
     fig = px.bar(
-        dragmode=False,
         df, 
         x="Year", 
         y="GDP", 
@@ -31,7 +30,8 @@ class PresentationComponents:
         xaxis=dict(
           tickmode="linear",
           tickangle=45,
-        )
+        ),
+        dragmode=False
     )
     fig.update_traces(
         marker_color="dodgerblue",  
