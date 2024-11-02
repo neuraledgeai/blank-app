@@ -49,7 +49,7 @@ class Model:
   def predict(self):
     # Prepare data
     db = LocalDatabase()
-    df = db.loadData()
+    df = db.loadData(lag=True)
 
     # Split
     feature = ["GDP_L1"]
