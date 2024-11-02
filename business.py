@@ -85,8 +85,8 @@ class Model:
       xaxis_title="Year",
       yaxis_title="GDP (in Trillions)"
     )
-    fig1.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name="Transitional growth trend", line=dict(dash='dash', color='red'))
-    fig1.update_layout(
+    fig.add_scatter(x=[start_year, end_year], y=[start_gdp, end_gdp], mode='lines', name="Transitional growth trend", line=dict(dash='dash', color='red'))
+    fig.update_layout(
       dragmode=False,
       legend=dict(
         yanchor="top",
