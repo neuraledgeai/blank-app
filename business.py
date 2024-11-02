@@ -73,6 +73,7 @@ class Model:
     # Reset the index to make 'Year' a column
     df = df.reset_index()
     fig = px.line(df, x="Year", y="GDP", title="Actual vs Predicted GDP Over Time")
+    st.plotly_chart(fig)
   
     
   
