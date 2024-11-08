@@ -146,9 +146,9 @@ class PresentationComponents:
         selector=dict(name="Predicted GDP")
     )
     fig.add_vline(x=2023, line_width=2, line_dash="dash", line_color="black")
-        fig.add_annotation(
-        x=2023, y=combined_df[combined_df["Year"] == 2023]["GDP"].values[0], 
-        text="End of Actual Data", showarrow=True, arrowhead=2, yshift=10
+    fig.add_annotation(
+      x=2023, y=combined_df[combined_df["Year"] == 2023]["GDP"].values[0], 
+      text="End of Actual Data", showarrow=True, arrowhead=2, yshift=10
     )
     fig.add_scatter(
         x=[highlight_year], 
