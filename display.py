@@ -141,6 +141,7 @@ class PresentationComponents:
         selector=dict(name="Predicted GDP")
     )
     st.plotly_chart(fig)
+    st.write(f"The line chart depicts India's GDP growth from 1960 to {years}. The blue line represents the actual GDP, while the red line shows the predicted GDP.")
     st.markdown(''':blue-background[Highlight] : India is expected to touch $5 trillion in GDP at current prices by 2029-2030.''')
 
     #st.dataframe(combined_df)
