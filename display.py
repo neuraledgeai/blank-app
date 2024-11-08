@@ -142,7 +142,7 @@ class PresentationComponents:
     )
     st.plotly_chart(fig)
     st.write("The line chart depicts India's GDP growth. The blue line represents the actual GDP, while the red line shows the predicted GDP. The predicted GDP line shows a continuation of this growth trend. You can adjust the forecast horizon to see the predicted GDPs over the next few years.")
-    st.markdown(''':blue-background[Highlight-1] : India is expected to touch $5 trillion in GDP at current prices by 2029-2030.''')
+    st.markdown(''':blue-background[Highlight-1] : India is expected to touch **$5 trillion in GDP at current prices by 2029-2030**.''')
     st.markdown(''':blue-background[Highlight-2] : The predicted GDP line indicates a continued upward trend.''')
     st.markdown(''':blue-background[Highlight-3] : The more rapid rise from 2000 to 2023 suggests significant economic expansion and development in the last two decades.''')
 
