@@ -136,7 +136,13 @@ class PresentationComponents:
 
   def forecast_primary_chart(self):
     predicted_gdps =  self.model.makeForecast(years = range(1, years))
-    actual_gdps_ = self.model.get_fitted_values()
+    actual_gdps = self.model.get_fitted_values()
+    
+    # Reset the index to make 'Year' a column
+    predicted_gdps = predicted_gdps.reset_index()
+    actual_gdps = actual_gdps.reset_index()
+    st.dataframe(predicted_gdps)
+    st.dataframe(actual_gdps)
     
     
   
