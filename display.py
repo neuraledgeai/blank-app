@@ -134,7 +134,7 @@ class PresentationComponents:
     st.markdown(''':blue-background[Highlight-1] : Indian economy is set in its transitional growth.''')
     st.markdown(''':blue-background[Highlight-2] : The pre-pandemic and post-pandemic transitional growth trends ensure no permanent loss in demand and output.''')
 
-  def forecast_primary_chart(self):
+  def forecast_primary_chart(self, years):
     predicted_gdps =  self.model.makeForecast(years = range(1, years))
     actual_gdps = self.model.get_fitted_values()
     
