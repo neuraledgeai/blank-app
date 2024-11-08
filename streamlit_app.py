@@ -13,7 +13,7 @@ pc = PresentationComponents()
 st.sidebar.header("Navigate the Dashboard")
 navigation = st.sidebar.radio(
     "Dive into the Data!",
-    ["GDP Forecast :blue[Bar Chart]", "Resilient Economy", "Model Performance", "Download Forecasted Data"],
+    ["GDP Forecast", "Resilient Economy", "Model Performance", "Download Forecasted Data"],
     captions=[
         "Visual Representation",
         "Visual Representation",
@@ -25,7 +25,7 @@ navigation = st.sidebar.radio(
 st.sidebar.header("Neural Edge AI")
 
 # Home section
-if navigation == "GDP Forecast :blue[Bar Chart]":
+if navigation == "GDP Forecast":
     st.subheader("India's $5 Trillion Economy: A Data-Driven Perspective okay")
     years = st.slider("Forecast Horizon (number of years)", 0, 20, 7)
     pc.forecast_primary_chart(years = years+1)
