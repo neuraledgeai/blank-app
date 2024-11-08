@@ -141,7 +141,7 @@ class PresentationComponents:
       text="2023", 
       showarrow=True,
       arrowhead=1,
-      ax=-30,
+      ax=-70,
       ay=40  # Adjusts the position of the annotation
     )
     fig.update_layout(
