@@ -127,10 +127,18 @@ class PresentationComponents:
         line=dict(width=2, dash="dash"),  # Thinner, dashed line for prediction
         selector=dict(name="Predicted GDP")
     )
+    fig.update_traces(
+        line_color="blue",
+        selector=dict(name="Actual GDP")
+    )
     fig.update_layout(
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
         dragmode=False
+    )
+    fig.update_traces(
+        line_color="red",
+        selector=dict(name="Predicted GDP")
     )
     st.plotly_chart(fig)
     st.markdown(''':blue-background[Highlight] : India is expected to touch $5 trillion in GDP at current prices by 2029-2030.''')
