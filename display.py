@@ -119,30 +119,13 @@ class PresentationComponents:
       title=" Path to a $5 Trillion Economy",
       #line_dash="Type"  # This will make the 'Predicted GDP' line dotted
     )
-    #fig.add_vline(
-    #  x=2023, 
-    #  line_width=2, 
-    #  line_dash="dash", 
-    #  line_color="black",
-    #  annotation_text="2023", 
-    #  annotation_position="top"
-    #)
-    fig.add_shape(
-      type="line",
-      x0=2023, 
-      y0=3549918918777.53, 
-      x1=2023, 
-      y1=combined_df["GDP"].max(),  # Top of the plot
-      line=dict(color="black", width=2, dash="dash")
-    )
-    fig.add_annotation(
-      x=2030, 
-      y=5188457203980.112,
-      text="2023", 
-      showarrow=True,
-      arrowhead=1,
-      ax=0,
-      ay=70  # Adjusts the position of the annotation
+    fig.add_vline(
+      x=2023, 
+      line_width=2, 
+      line_dash="dash", 
+      line_color="black",
+      annotation_text="2023", 
+      annotation_position="top"
     )
     fig.update_layout(
         xaxis_title="Year",
