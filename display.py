@@ -155,14 +155,14 @@ class PresentationComponents:
       y="GDP", 
       color="Type", 
       title="Actual vs. Predicted GDP Over Time Yeah",
-      line_dash="Type"  # This will make the 'Predicted GDP' line dotted
+      #line_dash="Type"  # This will make the 'Predicted GDP' line dotted
     )
     fig.add_vline(
       x=2023, 
       line_width=2, 
       line_dash="dash", 
       line_color="black",
-      annotation_text="2023 (Last Actual Data)", 
+      annotation_text="2023", 
       annotation_position="top"
     )
     st.plotly_chart(fig)
