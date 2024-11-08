@@ -142,7 +142,7 @@ class PresentationComponents:
       showarrow=True,
       arrowhead=1,
       ax=-70,
-      ay=70  # Adjusts the position of the annotation
+      ay=-70  # Adjusts the position of the annotation
     )
     fig.update_layout(
         xaxis_title="Year",
