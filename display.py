@@ -79,13 +79,13 @@ class PresentationComponents:
     
     # Add a column to indicate whether the data is actual or predicted
     actual_gdps["Type"] = "Actual GDP"
-    predicted_gdps["Type"] = "Predicted GDP"
+    predicted_gdps["Type"] = "Forecasted GDP"
     
     # Combine the DataFrames
     combined_df = pd.concat([actual_gdps, predicted_gdps])
     
     # Subheader
-    st.subheader("Download Predicted GDP Data")
+    st.subheader("Download Forecasted GDP Data")
     
     # Information
     st.write("Download the predicted GDP data as a csv file. Hover mouse over the dataframe or touch on it to access download option.")
@@ -94,7 +94,7 @@ class PresentationComponents:
     st.dataframe(df)
 
     # Subheader
-    st.subheader("Download Actual GDP Data along with Predicted GDP Data")
+    st.subheader("Download Forecasted GDP Data Along With Actual GDP Data")
 
     # Dataframe
     st.dataframe(combined_df)
