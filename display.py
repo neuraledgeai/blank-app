@@ -146,7 +146,7 @@ class PresentationComponents:
     predicted_gdps["Type"] = "Predicted GDP"
     
     # Combine the DataFrames
-    combined_df = pd.concat([actual_gdps_, predicted_gdps])
+    combined_df = pd.concat([actual_gdps, predicted_gdps])
 
     st.dataframe(combined_df)
     #st.dataframe(actual_gdps)
