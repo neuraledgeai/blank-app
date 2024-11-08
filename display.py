@@ -137,7 +137,7 @@ class PresentationComponents:
     )
     fig.add_annotation(
       x=2023, 
-      y=gdp_2023,
+      y=3549918918777.53,
       text="2023", 
       showarrow=True,
       arrowhead=1,
