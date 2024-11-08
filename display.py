@@ -139,7 +139,7 @@ class PresentationComponents:
     actual_gdps = self.model.get_fitted_values()
     
     # Reset the index to make 'Year' a column
-    predicted_gdps = predicted_gdps.reset_index()
+    #predicted_gdps = predicted_gdps.reset_index()
     actual_gdps = actual_gdps.reset_index()
     st.dataframe(predicted_gdps)
     st.dataframe(actual_gdps)
