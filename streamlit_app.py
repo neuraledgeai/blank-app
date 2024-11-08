@@ -18,7 +18,7 @@ navigation = st.sidebar.radio(
         "Visual Representation",
         "Visual Representation",
         "Visual Representation",
-        "CSV file"
+        "CSV files"
         
     ],
 )
