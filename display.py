@@ -165,6 +165,16 @@ class PresentationComponents:
       annotation_text="2023", 
       annotation_position="top"
     )
+    fig.update_layout(
+        xaxis_title="Year",
+        yaxis_title="GDP (in Trillions)",
+        template="plotly_white",
+        xaxis=dict(
+            tickmode="linear",
+            tickangle=45,
+        ),
+        dragmode=False
+    )
     st.plotly_chart(fig)
 
     #st.dataframe(combined_df)
