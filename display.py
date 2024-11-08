@@ -83,7 +83,7 @@ class PresentationComponents:
     
     # Combine the DataFrames
     combined_df = pd.concat([actual_gdps, predicted_gdps])
-    combined_df = combined_df.reset_index()
+  
     # Subheader
     st.subheader("Download Forecasted GDP Data")
     
@@ -127,7 +127,6 @@ class PresentationComponents:
     
     # Combine the DataFrames
     combined_df = pd.concat([actual_gdps, predicted_gdps])
-    combined_df = combined_df.reset_index()
     
     # Plot the chart
     fig = px.line(
