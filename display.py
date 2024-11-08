@@ -139,10 +139,17 @@ class PresentationComponents:
     actual_gdps = self.model.get_fitted_values()
     
     # Reset the index to make 'Year' a column
-    #predicted_gdps = predicted_gdps.reset_index()
     actual_gdps = actual_gdps.reset_index()
-    st.dataframe(predicted_gdps)
-    st.dataframe(actual_gdps)
+    
+    # Add a column to indicate whether the data is actual or predicted
+    actual_gdps["Type"] = "Actual GDP"
+    predicted_gdps["Type"] = "Predicted GDP"
+    
+    # Combine the DataFrames
+    combined_df = pd.concat([actual_gdps_, predicted_gdps])
+
+    st.dataframe(combined_df)
+    3st.dataframe(actual_gdps)
     
     
   
