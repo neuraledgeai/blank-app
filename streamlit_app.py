@@ -10,7 +10,7 @@ st.set_page_config(
 
 pc = PresentationComponents()
 
-st.sidebar.header("Navigate the Dashboard")
+st.sidebar.header("Navigate the Dashboard shs")
 navigation = st.sidebar.radio(
     "Dive into the Data!",
     ["GDP Forecast", "Resilient Economy", "Model Performance", "Download Forecasted Data"],
