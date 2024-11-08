@@ -133,6 +133,7 @@ class PresentationComponents:
         dragmode=False
     )
     st.plotly_chart(fig)
+    st.markdown(''':blue-background[Highlight] : India is expected to touch 5 trillion in GDP at current prices by 2030.''')
 
     #st.dataframe(combined_df)
     #st.dataframe(actual_gdps)
