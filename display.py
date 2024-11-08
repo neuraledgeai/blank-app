@@ -119,13 +119,13 @@ class PresentationComponents:
       title=" Path to a $5 Trillion Economy",
       #line_dash="Type"  # This will make the 'Predicted GDP' line dotted
     )
-    fig.add_vline(
-      x=2023, 
-      line_width=2, 
-      line_dash="dash", 
-      line_color="black",
-      annotation_text="2023", 
-      annotation_position="top"
+    fig.update_traces(
+        line=dict(width=3),  # Thicker line
+        selector=dict(name="Actual GDP")  # Ensure Actual GDP is distinguished
+    )
+    fig.update_traces(
+        line=dict(width=2, dash="dash"),  # Thinner, dashed line for prediction
+        selector=dict(name="Predicted GDP")
     )
     fig.update_layout(
         xaxis_title="Year",
