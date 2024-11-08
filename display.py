@@ -136,8 +136,8 @@ class PresentationComponents:
       line=dict(color="black", width=2, dash="dash")
     )
     fig.add_annotation(
-      x=2023, 
-      y=3549918918777.53,
+      x=2030, 
+      y=5188457203980.112,
       text="2023", 
       showarrow=True,
       arrowhead=1,
