@@ -27,9 +27,11 @@ st.sidebar.header("Neural Edge AI")
 
 # Home section
 if navigation == "GDP Forecast :blue[Bar Chart]":
+    model = Model()
     st.subheader("GDP hh Forecast :blue[Bar Chart]")
     years = st.slider("Forecast Horizon (number of years)", 0, 20, 7)
     pc.forecast_bar_chart(years = years+1)
+    model.get_fitted_values()
 elif navigation == "GDP Forecast :blue[Line Chart]":
     st.subheader("GDP Forecast :blue[Line Chart]")
     years = st.slider("Forecast Horizon", 0, 20, 7)
