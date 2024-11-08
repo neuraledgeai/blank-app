@@ -149,7 +149,7 @@ class PresentationComponents:
     combined_df = pd.concat([actual_gdps_, predicted_gdps])
 
     st.dataframe(combined_df)
-    3st.dataframe(actual_gdps)
+    #st.dataframe(actual_gdps)
     
     
   
