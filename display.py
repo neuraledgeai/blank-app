@@ -157,6 +157,8 @@ class PresentationComponents:
       title="Actual vs. Predicted GDP Over Time",
       line_dash="Type"  # This will make the 'Predicted GDP' line dotted
     )
+    fig.update_traces(line=dict(dash="solid"), selector=dict(name="Actual GDP"))
+    fig.update_traces(line=dict(dash="dot"), selector=dict(name="Predicted GDP"))
     st.plotly_chart(fig)
 
     #st.dataframe(combined_df)
