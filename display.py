@@ -154,7 +154,7 @@ class PresentationComponents:
       x="Year", 
       y="GDP", 
       color="Type", 
-      title="Actual vs. Predicted GDP Over Time",
+      title="Actual vs. Predicted GDP Over Time Yeah",
       line_dash="Type"  # This will make the 'Predicted GDP' line dotted
     )
     fig.add_vline(
