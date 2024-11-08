@@ -11,7 +11,7 @@ class PresentationComponents:
   ):
     self.model = model
 
-  def forecast_bar_chart(self,years):
+  def forecast(self,years):
     # Get dataframe
     df =  self.model.makeForecast(years = range(1, years))
 
