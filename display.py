@@ -71,6 +71,18 @@ class PresentationComponents:
   def downloadData(self, years):
     # Get dataframe
     df =  self.model.makeForecast(years = range(1, years))
+    predicted_gdps =  self.model.makeForecast(years = range(1, years))
+    actual_gdps = self.model.get_fitted_values()
+    
+    # Reset the index to make 'Year' a column
+    actual_gdps = actual_gdps.reset_index()
+    
+    # Add a column to indicate whether the data is actual or predicted
+    actual_gdps["Type"] = "Actual GDP"
+    predicted_gdps["Type"] = "Predicted GDP"
+    
+    # Combine the DataFrames
+    combined_df = pd.concat([actual_gdps, predicted_gdps])
     
     # Subheader
     st.subheader("Download Predicted GDP Data")
@@ -80,6 +92,12 @@ class PresentationComponents:
     
     # Dataframe
     st.dataframe(df)
+
+    # Subheader
+    st.subheader("Download Actual GDP Data along with Predicted GDP Data")
+
+    # Dataframe
+    st.dataframe(combined_df)
     
     st.markdown("""
     <div style="text-align: center; font-size: 0.8em; color: grey;">
