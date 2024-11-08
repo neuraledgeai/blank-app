@@ -133,8 +133,7 @@ class PresentationComponents:
       y0=3549918918777.53, 
       x1=2023, 
       y1=combined_df["GDP"].max(),  # Top of the plot
-      line=dict(color="black", width=2, dash="dash"),
-      annotation_text="2023 (Last Actual Data)"
+      line=dict(color="black", width=2, dash="dash")
     )
     fig.add_annotation(
       x=2023, 
@@ -143,7 +142,7 @@ class PresentationComponents:
       showarrow=True,
       arrowhead=1,
       ax=-40,
-      ay=-40  # Adjusts the position of the annotation
+      ay=40  # Adjusts the position of the annotation
     )
     fig.update_layout(
         xaxis_title="Year",
