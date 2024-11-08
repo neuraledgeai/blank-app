@@ -130,16 +130,7 @@ class PresentationComponents:
     fig.update_layout(
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
-        dragmode=False,
-        legend=dict(
-            title="Data Type",
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="center",
-            x=0.5,
-            font=dict(size=12)
-        )
+        dragmode=False
     )
     st.plotly_chart(fig)
     st.markdown(''':blue-background[Highlight] : India is expected to touch $5 trillion in GDP at current prices by 2029-2030.''')
