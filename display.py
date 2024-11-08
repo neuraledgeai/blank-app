@@ -168,11 +168,6 @@ class PresentationComponents:
     fig.update_layout(
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
-        template="plotly_white",
-        xaxis=dict(
-            tickmode="linear",
-            tickangle=45,
-        ),
         dragmode=False
     )
     st.plotly_chart(fig)
