@@ -135,6 +135,15 @@ class PresentationComponents:
       y1=combined_df["GDP"].max(),  # Top of the plot
       line=dict(color="black", width=2, dash="dash")
     )
+    fig.add_annotation(
+      x=2023, 
+      y=gdp_2023,
+      text="2023", 
+      showarrow=True,
+      arrowhead=1,
+      ax=0,
+      ay=-40  # Adjusts the position of the annotation
+    )
     fig.update_layout(
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
