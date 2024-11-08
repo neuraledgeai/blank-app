@@ -27,10 +27,9 @@ st.sidebar.header("Neural Edge AI")
 
 # Home section
 if navigation == "GDP Forecast :blue[Bar Chart]":
-    #st.subheader("GDP Forecast :blue[Bar Chart]")
+    st.subheader("India's $5 Trillion Economy: A Data-Driven Perspective")
     years = st.slider("Forecast Horizon (number of years)", 0, 20, 7)
     pc.forecast_primary_chart(years = years+1)
-    st.subheader("GDP Forecast :blue[Bar Chart]")
     pc.forecast_bar_chart(years = years+1)
 elif navigation == "GDP Forecast :blue[Line Chart]":
     st.subheader("GDP Forecast :blue[Line Chart]")
