@@ -109,11 +109,6 @@ class PresentationComponents:
     
     # Combine the DataFrames
     combined_df = pd.concat([actual_gdps, predicted_gdps])
-
-    gdp_threshold = 5e12  # 5 trillion
-    highlight_point = predicted_gdps[predicted_gdps["GDP"] >= gdp_threshold].iloc[0]  # Get the first row where GDP >= 5 trillion
-    highlight_year = highlight_point["Year"]
-    highlight_gdp = highlight_point["GDP"]
     
     # Plot the chart
     fig = px.line(
@@ -144,16 +139,6 @@ class PresentationComponents:
     fig.update_traces(
         line_color="red",
         selector=dict(name="Predicted GDP")
-    )
-    fig.add_vline(x=2023, line_width=2, line_dash="dash", line_color="black")
-    
-    fig.add_scatter(
-        x=[highlight_year], 
-        y=[highlight_gdp], 
-        mode="markers+text", 
-        marker=dict(size=10, color="green", symbol="circle"),
-        text=["$5 Trillion"],
-        textposition="top right"
     )
     st.plotly_chart(fig)
     st.write("The line chart depicts India's GDP growth. The blue line represents the actual GDP, while the red line shows the predicted GDP. The predicted GDP line shows a continuation of this growth trend. You can adjust the forecast horizon to see the predicted GDPs over the next few years.")
