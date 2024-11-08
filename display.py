@@ -147,8 +147,19 @@ class PresentationComponents:
     
     # Combine the DataFrames
     combined_df = pd.concat([actual_gdps, predicted_gdps])
+    
+    # Plot the chart
+    fig = px.line(
+      combined_df, 
+      x="Year", 
+      y="GDP", 
+      color="Type", 
+      title="Actual vs. Predicted GDP Over Time",
+      line_dash="Type"  # This will make the 'Predicted GDP' line dotted
+    )
+    st.plotly_chart(fig)
 
-    st.dataframe(combined_df)
+    #st.dataframe(combined_df)
     #st.dataframe(actual_gdps)
     
     
