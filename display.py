@@ -52,44 +52,6 @@ class PresentationComponents:
     </div>
     """, unsafe_allow_html=True)
 
-  def forecast_line_chart(self, years):
-    # Get dataframe
-    df =  self.model.makeForecast(years = range(1, years))
-
-    # Plot figure
-    fig = px.line(
-        df, 
-        x="Year", 
-        y="GDP", 
-        title=f"GDP Forecast Over the Next {years-1} Years",
-        markers=True
-    )
-    fig.update_layout(
-        xaxis_title="Year",
-        yaxis_title="GDP (in Trillions)",
-        template="plotly_white",
-        xaxis=dict(
-            tickmode="linear",
-            tickangle=45,
-        ),
-        dragmode=False
-    )
-    fig.update_traces(
-        line=dict(color="royalblue", width=3),  
-        marker=dict(size=8, color="darkblue")
-    )
-    if(years > 17):
-      st.warning("Forecasting too far into the future may reduce accuracy.", icon="⚠️")
-      
-    st.plotly_chart(fig)
-    st.write(f"The Line Chart provides a visual representation of India’s projected GDP growth over the next {years-1} years. Each point represents the forecasted GDP value for a given year, displayed in trillions of US dollars.")
-    st.markdown(''':blue-background[Highlight] : India is expected to touch 5 trillion in GDP at current prices by 2030.''')
-    st.markdown("""
-    <div style="text-align: center; font-size: 0.8em; color: grey;">
-    The model is trained on data only up to 2023, so predictions may vary due to future uncertainties. Please verify important information independently.
-    </div>
-    """, unsafe_allow_html=True)
-
   def modelPerformance(self):
     # Get dataframe
     df = self.model.predict()
