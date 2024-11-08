@@ -130,7 +130,7 @@ class PresentationComponents:
     fig.add_shape(
       type="line",
       x0=2023, 
-      y0=gdp_2023, 
+      y0=3549918918777.53, 
       x1=2023, 
       y1=combined_df["GDP"].max(),  # Top of the plot
       line=dict(color="black", width=2, dash="dash")
