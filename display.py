@@ -152,7 +152,8 @@ class PresentationComponents:
     fig.update_layout(
         xaxis_title="Year",
         yaxis_title="GDP (in Trillions)",
-        dragmode=False
+        dragmode=False,
+        showlegend=False
     )
     fig.update_traces(
         line_color="red",
