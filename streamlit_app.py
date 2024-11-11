@@ -37,7 +37,7 @@ elif navigation == "Download Forecasted Data":
     pc.downloadData(years = years+1)
 elif navigation == "Resilient Economy":
     pc.resilientEconomy()
-    st.latex(r"\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 \cdot x")
+    st.latex(r"\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 \cdot x_i")
 
    
     
