@@ -38,10 +38,6 @@ elif navigation == "Download Forecasted Data":
 elif navigation == "Resilient Economy":
     pc.resilientEconomy()
     st.latex(r"\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 \cdot x")
-    st.latex(r"\hat{y}: \text{ The predicted value of GDP}")
-    st.latex(r"\hat{\beta}_0: \text{ The estimated intercept, representing the base level of GDP when } x \text{ is zero}")
-    st.latex(r"\hat{\beta}_1: \text{ The estimated coefficient, showing the rate of change in GDP for each unit increase in } x")
-    st.latex(r"x: \text{ The predictor variable, such as year or other factors impacting GDP}")
 
    
     
