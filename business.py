@@ -119,6 +119,9 @@ class Model:
   def get_fitted_values(self):
     df = self.db.loadData()
     return df
+
+  def intercept(self):
+    return self.model.intercept_
     
   
   
