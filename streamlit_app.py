@@ -37,6 +37,7 @@ elif navigation == "Download Forecasted Data":
     pc.downloadData(years = years+1)
 elif navigation == "Resilient Economy":
     pc.resilientEconomy()
+    st.write("The goal of this empirical analysis is to forecast India’s GDP growth trajectory and estimate the specific year in which India is likely to reach a GDP of $5 trillion. To do so, we estimate a linear regression function of the form")
     st.latex(r"\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 \cdot x_i")
 
    
