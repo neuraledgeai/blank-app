@@ -124,7 +124,7 @@ class Model:
     return self.model.intercept_
 
   def coeff(self):
-      return self.model.coeff_
+      return self.model.coef_
     
   
   
