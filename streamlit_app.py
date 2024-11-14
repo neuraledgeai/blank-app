@@ -44,7 +44,7 @@ elif navigation == "Resilient Economy":
     #st.latex(r"\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 \cdot x_i")
     st.latex(r"{\text{GDP}_{\text{next year}}} = {\beta}_0 + {\beta}_1 \cdot \text{GDP}_{\text{previous year}}")
     st.write("The independent variable is the GDP value from the previous year, which we use to forecast future values. For example, if you provide the 2023 GDP value as the independent variable, the model will estimate the 2024 GDP based on the estimated intercept and estimated slope.")
-    st.write(f"This is intercept {intercept} and this is coefficient {coefficient}")
+    st.write(f"This is intercept {intercept} and this is coefficient {coefficient[0]}")
 
 
    
