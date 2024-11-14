@@ -38,7 +38,7 @@ elif navigation == "Download Forecasted Data":
 elif navigation == "Resilient Economy":
     model = Model()
     intercept = model.intercept()
-    coefficient = model.coeff()
+    coefficient = model.coef()
     pc.resilientEconomy()
     st.write("The goal of this empirical analysis is to forecast India’s GDP growth trajectory and estimate the specific year in which India is likely to reach a GDP of $5 trillion. To do so, we estimate a linear regression function of the form")
     #st.latex(r"\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 \cdot x_i")
