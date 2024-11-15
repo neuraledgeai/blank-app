@@ -128,7 +128,15 @@ class Model:
 
   def regressionChart(self):
     df = self.db.loadData(lag=True)
-    return df
+    target = "GDP"
+    feature = ["GDP_L1"]
+    X_train = df[feature]
+    y_train = df[target]
+    plot_data = pd.DataFrame({
+      "X_train": X_train.flatten(),  # Flatten in case X_train is 2D
+      "Predicted": self.model.predict(X_train)
+    })
+    return plot_data
       
       
   
