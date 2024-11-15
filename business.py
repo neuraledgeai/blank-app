@@ -148,7 +148,7 @@ class Model:
         yaxis_title_font_size=14,
         legend_title_text='Legend',
     )
-    return plot_data, fig
+    return data, fig
       
       
   
