@@ -124,8 +124,13 @@ class Model:
     return self.model.intercept_
 
   def coef(self):
-      return self.model.coef_[0]
-    
+    return self.model.coef_[0]
+
+  def regressionChart(self):
+    df = self.db.loadData(lag=True)
+    return df
+      
+      
   
   
     
