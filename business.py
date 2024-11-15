@@ -143,9 +143,7 @@ class Model:
                     )
     fig.add_scatter(x=data["GDP_L1"], y=data["Predicted_GDP"],  mode="lines", name="Ultimate Model Linear Prediction")
     fig.update_layout(
-        title_font_size=18,
-        xaxis_title_font_size=14,
-        yaxis_title_font_size=14,
+        dragmode=False
     )
     return data, fig
       
