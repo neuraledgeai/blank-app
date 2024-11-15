@@ -136,7 +136,8 @@ class Model:
       "X_train": X_train.squeeze(),  # Flatten in case X_train is 2D
       "Predicted": self.model.predict(X_train)
     })
-    return plot_data
+    fig = px.line(plot_data, x="X_train", y="Predicted")
+    return plot_data, fig
       
       
   
