@@ -141,12 +141,11 @@ class Model:
     fig = px.scatter(data, x="GDP_L1", y="GDP", title="Ultimate Model Predictions on Training Data",
                      labels={"GDP_L1": "GDP_L1 (Previous Year, US$ Trillion)", "GDP": "GDP (Current US$ Trillion)"}
                     )
-    fig.add_scatter(x=data["GDP_L1"], y=data["Predicted_GDP"],  mode="lines", name="Ultimate Model Linear Prediction", line=dict(color="blue"))
+    fig.add_scatter(x=data["GDP_L1"], y=data["Predicted_GDP"],  mode="lines", name="Ultimate Model Linear Prediction")
     fig.update_layout(
         title_font_size=18,
         xaxis_title_font_size=14,
         yaxis_title_font_size=14,
-        legend_title_text='Legend',
     )
     return data, fig
       
