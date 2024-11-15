@@ -133,7 +133,7 @@ class Model:
     X_train = df[feature]
     y_train = df[target]
     plot_data = pd.DataFrame({
-      "X_train": X_train,  # Flatten in case X_train is 2D
+      "X_train": X_train.squeeze(),  # Flatten in case X_train is 2D
       "Predicted": self.model.predict(X_train)
     })
     return plot_data
