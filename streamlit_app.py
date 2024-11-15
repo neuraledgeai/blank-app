@@ -48,6 +48,7 @@ elif navigation == "Resilient Economy":
     #st.write(f"This is intercept {intercept} and this is coefficient {coefficient[0]}")
     #st.dataframe(df)
     st.plotly_chart(fig)
+    st.write("Each point represents the GDP of a given year plotted against the GDP of the previous year on the x-axis. The blue line represents the linear regression model fitted to this data.")
 
 
    
