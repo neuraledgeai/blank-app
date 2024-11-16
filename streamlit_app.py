@@ -13,7 +13,7 @@ pc = PresentationComponents()
 st.sidebar.header("Navigate the Dashboard")
 navigation = st.sidebar.radio(
     "Dive into the Data!",
-    ["GDP Forecast", "Resilient Economy", "Model Performance", "Download Forecasted Data"],
+    ["GDP Forecast", "Resilient Economy", "Emperical Results", "Download Forecasted Data"],
     captions=[
         "Visual Representation",
         "Visual Representation",
@@ -30,7 +30,7 @@ if navigation == "GDP Forecast":
     years = st.slider("Forecast Horizon (number of years)", 0, 20, 7)
     pc.forecast_primary_chart(years = years+1)
     pc.forecast_bar_chart(years = years+1)
-elif navigation == "Model Performance":
+elif navigation == "Emperical Results":
     pc.empericalResults()
 elif navigation == "Download Forecasted Data":
     years = st.slider("Forecast Horizon", 0, 20, 7)
