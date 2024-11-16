@@ -126,7 +126,7 @@ class Model:
   def coef(self):
     return self.model.coef_[0]
 
-  def regressionChart(self):
+  def get_fitted_figure(self):
     df = self.db.loadData(lag=True)
     target = "GDP"
     feature = ["GDP_L1"]
@@ -145,7 +145,7 @@ class Model:
     fig.update_layout(
         dragmode=False
     )
-    return data, fig
+    return fig
       
       
   
