@@ -52,7 +52,7 @@ class PresentationComponents:
     </div>
     """, unsafe_allow_html=True)
 
-  def modelPerformance(self):
+  def empericalResults(self):
     # Get dataframe
     df = self.model.predict()
 
