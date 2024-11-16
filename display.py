@@ -70,7 +70,7 @@ class PresentationComponents:
     # Subheader
     st.subheader("Emperical Results")
     st.write("The goal of this empirical analysis is to forecast India’s GDP growth trajectory and estimate the specific year in which India is likely to reach a GDP of $5 trillion. To do so, we estimate a linear regression function of the form")
-    st.latex(r"\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 \cdot x_i")
+    st.latex(r"{\text{GDP}_{\text{next year}}} = {\beta}_0 + {\beta}_1 \cdot \text{GDP}_{\text{previous year}}")
     st.write(f"The independent variable is the GDP value from the previous year, which we use to forecast future values. For example, if you provide the 2023 GDP value as the independent variable, the model will estimate the 2024 GDP based on the estimated intercept *{intercept}* and estimated slope *{coefficient}*.")
     st.plotly_chart(fig_fit)
     st.write("Each point represents the GDP of a given year plotted against the GDP of the previous year on the x-axis. The blue line represents the linear regression model fitted to this data.")
