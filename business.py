@@ -138,7 +138,7 @@ class Model:
       "GDP_L1": X_train.squeeze(),  # Flatten in case X_train is 2D
       "Predicted_GDP": self.model.predict(X_train)
     })
-    fig = px.scatter(data, x="GDP_L1", y="GDP", title="Model Fit",
+    fig = px.scatter(data, x="GDP_L1", y="GDP", title="Model Fitness",
                      labels={"GDP_L1": "GDP_L1 (Previous Year, US$ Trillion)", "GDP": "GDP (Current US$ Trillion)"}
                     )
     fig.add_scatter(x=data["GDP_L1"], y=data["Predicted_GDP"],  mode="lines", name="Linear Model")
