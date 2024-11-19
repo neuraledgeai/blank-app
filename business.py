@@ -11,7 +11,7 @@ import plotly.express as px
 class Model:
   def __init__(
     self,
-    model_name = "india_gdp_forecasting_model.pkl",
+    model_name = "new_india_gdp_forecasting_model.pkl",
     db = LocalDatabase()
   ):
     self.model = joblib.load(model_name)
