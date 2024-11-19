@@ -4,7 +4,7 @@ class LocalDatabase:
   
   def __init__(
     self,
-    file_name = "gdp_india_1960-2023.csv"
+    file_name = "new_gdp_india_1960-2023.csv"
   ):
     self.df = pd.read_csv(file_name)
     
