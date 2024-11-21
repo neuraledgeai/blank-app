@@ -27,7 +27,7 @@ pc = PresentationComponents()
 
 with st.sidebar:
     selected = option_menu(
-        "GDP-PY", ["Forecast GDP", "Resilient Economy",  "Emperical Results", "Download Forecasted Data"], 
+        "**GDP-PY**", ["Forecast GDP", "Resilient Economy",  "Emperical Results", "Download Data"], 
         icons=["bar-chart-fill", "ubuntu", "card-text", "download"],
         #menu_icon="cast",
         default_index=1
@@ -42,7 +42,7 @@ if selected == "Forecast GDP":
     pc.forecast_bar_chart(years = years+1)
 elif selected == "Emperical Results":
     pc.empericalResults()
-elif selected == "Download Forecasted Data":
+elif selected == "Download Data":
     years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.downloadData(years = years+1)
 elif selected == "Resilient Economy":
