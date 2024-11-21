@@ -30,7 +30,7 @@ with st.sidebar:
         "GDP-PY", ["Forecast GDP", "Resilient Economy",  "Emperical Results", "Download Data"], 
         icons=["bar-chart-fill", "ubuntu", "card-text", "download"],
         menu_icon="window-stack",
-        default_index=2
+        #default_index=2
     )
     #selected
 
