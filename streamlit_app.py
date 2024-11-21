@@ -35,7 +35,7 @@ with st.sidebar:
     #selected
 
 # Home section
-if selected == "GDP Forecast":
+if selected == "Forecast GDP":
     st.subheader("India's $5 Trillion Economy: :blue[A Data-Driven Perspective]")
     years = st.slider("Forecast Horizon (number of years)", 0, 20, 7)
     pc.forecast_primary_chart(years = years+1)
