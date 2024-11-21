@@ -27,9 +27,9 @@ pc = PresentationComponents()
 
 with st.sidebar:
     selected = option_menu(
-        "**GDP-PY**", ["Forecast GDP", "Resilient Economy",  "Emperical Results", "Download Data"], 
+        "GDP-PY", ["Forecast GDP", "Resilient Economy",  "Emperical Results", "Download Data"], 
         icons=["bar-chart-fill", "ubuntu", "card-text", "download"],
-        #menu_icon="cast",
+        menu_icon="graph-up",
         default_index=1
     )
     #selected
