@@ -24,18 +24,27 @@ pc = PresentationComponents()
 #)
 #st.sidebar.header("Neural Edge AI")
 
+with st.sidebar:
+    selected = option_menu(
+        "GDP-PY", ["Forecast GDP", "Resilient Economy",  "Emperical Results", "Download Forecasted Data"], 
+        icons=["bar-chart-fill", "ubuntu", "card-text", "download"],
+        #menu_icon="cast",
+        default_index=1
+    )
+    #selected
+
 # Home section
-if navigation == "GDP Forecast":
+if selected == "GDP Forecast":
     st.subheader("India's $5 Trillion Economy: :blue[A Data-Driven Perspective]")
     years = st.slider("Forecast Horizon (number of years)", 0, 20, 7)
     pc.forecast_primary_chart(years = years+1)
     pc.forecast_bar_chart(years = years+1)
-elif navigation == "Emperical Results":
+elif selected == "Emperical Results":
     pc.empericalResults()
-elif navigation == "Download Forecasted Data":
+elif selectedn == "Download Forecasted Data":
     years = st.slider("Forecast Horizon", 0, 20, 7)
     pc.downloadData(years = years+1)
-elif navigation == "Resilient Economy":
+elif selected == "Resilient Economy":
     #model = Model()
     #intercept = model.intercept()
     #coefficient = model.coef()
