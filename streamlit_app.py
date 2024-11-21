@@ -11,7 +11,7 @@ st.set_page_config(
 
 pc = PresentationComponents()
 
-st.sidebar.header("A reliable tool to forecast Indian GDP")
+#st.sidebar.header("A reliable tool to forecast Indian GDP")
 #navigation = st.sidebar.radio(
     #"Dive into the Data!",
     #["GDP Forecast", "Resilient Economy", "Emperical Results", "Download Forecasted Data"],
