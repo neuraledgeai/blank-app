@@ -2,6 +2,7 @@ import streamlit as st
 from database import LocalDatabase
 from business import Model
 from display import PresentationComponents
+from streamlit_option_menu import option_menu
 
 st.set_page_config(
     page_title="India GDP Forecasting Tool",
