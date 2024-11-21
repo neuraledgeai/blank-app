@@ -10,19 +10,19 @@ st.set_page_config(
 
 pc = PresentationComponents()
 
-st.sidebar.header("Navigate the Dashboard")
-navigation = st.sidebar.radio(
-    "Dive into the Data!",
-    ["GDP Forecast", "Resilient Economy", "Emperical Results", "Download Forecasted Data"],
-    captions=[
-        "Visual Representation",
-        "Visual Representation",
-        "Visual Representation",
-        "CSV files"
+#st.sidebar.header("Navigate the Dashboard")
+#navigation = st.sidebar.radio(
+    #"Dive into the Data!",
+    #["GDP Forecast", "Resilient Economy", "Emperical Results", "Download Forecasted Data"],
+    #captions=[
+        #"Visual Representation",
+        #"Visual Representation",
+        #"Visual Representation",
+        #"CSV files"
         
-    ],
-)
-st.sidebar.header("Neural Edge AI")
+    #],
+#)
+#st.sidebar.header("Neural Edge AI")
 
 # Home section
 if navigation == "GDP Forecast":
